@@ -1,0 +1,118 @@
+themes {
+    Black_Metal {
+        ribbon_unselected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        ribbon_selected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        text_unselected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+	text_selected {
+            base 235 235 235
+            background 35 35 35
+            emphasis_0 95 135 135
+            emphasis_1 208 223 238
+            emphasis_2 137 180 215
+            emphasis_3 110 76 76
+        }
+        table_title {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        table_cell_unselected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        table_cell_selected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        list_unselected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        list_selected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        frame_unselected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        frame_selected {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        frame_highlight {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        exit_code_success {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+        exit_code_error {
+            base 193 193 193
+            background 0 0 0
+            emphasis_0 233 149 152
+            emphasis_1 136 136 136
+            emphasis_2 170 170 170
+            emphasis_3 153 153 153
+        }
+    }
+}
+
+theme "Black_Metal"

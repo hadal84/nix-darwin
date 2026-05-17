@@ -1,0 +1,36 @@
+# zellij
+# if [[ -z "$ZELLIJ" && $- == *i* ]] && command -v zellij > /dev/null; then
+#    exec zellij attach -c
+# fi
+
+# paths
+export PATH=$PATH:/Users/cinaremir/.spicetify
+export PATH="$HOME/.config/emacs/bin:$PATH"
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+
+# aliases
+alias fetch="fastfetch"
+alias cat="bat"
+alias python="python3"
+alias pip="pip3"
+alias tmacs="emacs -nw"
+alias ls="lsd"
+alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
+alias x=exit
+
+# nix
+alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec zsh"
+alias update="sudo nix flake update && rebuild"
+
+# pure
+autoload -U promptinit; promptinit
+prompt pure
+
+# ssh phenoxide
+alias phenoxide="ssh hadal84@140.86.212.251 -i /Users/cinaremir/Documents/zumrutKitaplik/code/obfuscation/Phenoxide/ssh/ssh-key-2026-04-08.key"
+
+# simple macos utilities
+alias gatekeeper="xattr -d com.apple.quarantine"
+alias ccache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder && echo DNS cache cleared."
+
+eval "$(zoxide init zsh --cmd cd)"

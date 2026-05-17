@@ -1,0 +1,70 @@
+
+{
+ "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "color": {"1": "white"},
+        "source": "~/.config/fastfetch/images/mac.txt",
+	// "type":"kitty",
+	// "height":10,
+	// "width":22,
+        "padding": {
+            "top": 2,
+            "right": 6
+        }
+    },
+    "display": {
+        "separator": " •  "
+    },
+    "modules": [
+	"break",
+	"break",
+	{
+            "type": "title",
+            "color": {
+                "user": "15",  // = color2
+                "at": "15",
+                "host": "15"
+            }
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "macOS          ",
+            "keyColor": "15",
+        },
+        {
+            "type": "kernel",
+            "key": "darwin         ",
+            "keyColor": "15",
+        },
+        {
+            "type": "packages",
+            "format": "{} (nix-darwin)",
+            "key": "packages       ",
+            "keyColor": "15",
+        },
+        {
+            "type": "shell",
+            "key": "unix shell     ",
+            "keyColor": "15",
+        },
+        {
+            "type": "terminal",
+            "key": "terminal       ",
+            "keyColor": "15",
+        },
+        {
+            "type": "wm",
+            "format": "{} ({3})",
+            "key": "window manager ",
+            "keyColor": "15",
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "circle",
+        },
+        "break",
+        "break",
+    ]
+}
