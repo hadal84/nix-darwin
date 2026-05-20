@@ -2,16 +2,14 @@
 
 {
   imports = [
-    ./packages/ghostty/ghostty.nix
     ./packages/zellij/zellij.nix
   ];
 
   homebrew = {
     enable=true;
+    onActivation.cleanup = "zap"; # enforce strict declerativity
 
     casks = [
-     "ghostty"
-     "omniwm"
     ];
 
     brews = [
@@ -19,7 +17,7 @@
      "zellij"
     ];
 
-   taps = builtins.attrNames config.nix-homebrew.taps; 
+    taps = builtins.attrNames config.nix-homebrew.taps; 
 
  };
 }

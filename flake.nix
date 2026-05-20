@@ -26,10 +26,6 @@
     flake = false;
     };
 
-    homebrew-barutsrb = {
-    url = "github:barutsrb/homebrew-tap";
-    flake = false;
-    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, homebrew-core, homebrew-cask, ...}:
@@ -82,7 +78,6 @@
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "d12frosted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
-              "barutsrb/homebrew-tap" = inputs.homebrew-barutsrb;
             };
             mutableTaps = false; # use flake for repos
           };

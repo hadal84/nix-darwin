@@ -15,3 +15,9 @@ window-padding-y = 10,2
 
 background-opacity=0.974
 background-blur=macos-glass-clear
+
+quit-after-last-window-closed = false
+keybind = global:cmd+enter=toggle_quick_terminal
+quick-terminal-position = center
+quick-terminal-screen = mouse
+quick-terminal-animation-duration = 0.1

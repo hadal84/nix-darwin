@@ -16,6 +16,7 @@ alias pip="pip3"
 alias tmacs="emacs -nw"
 alias ls="lsd"
 alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
+alias reloadbar="sketchybar --reload"
 alias x=exit
 
 # nix

@@ -9,7 +9,7 @@
         "source": "~/.config/fastfetch/images/cybernix.png",
         "padding": {
             "top": 2,
-            "right": 6
+            "right": 3
         }
     },
     "display": {
@@ -55,15 +55,21 @@
         },
         {
             "type": "wm",
-            "format": "{} ({3})",
+            "format": "OmniWM",
             "key": "window manager ",
+            "keyColor": "15",
+        },
+	{
+            "type": "command",
+            "key": "nix version    ",
+	    "text": "nix --version | awk '{print $3}'",
             "keyColor": "15",
         },
         "break",
         {
             "type": "colors",
             "symbol": "circle",
-        },
+        },	
         "break",
         "break",
     ]

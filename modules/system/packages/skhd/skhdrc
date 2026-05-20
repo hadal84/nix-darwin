@@ -1,0 +1,2 @@
+cmd + shift - z : open -a "Zen Browser" --args -new-window
+cmd + shift - f : osascript -e 'tell application "Finder" to set target of (make new Finder window) to folder "Desktop" of home' -e 'activate application "Finder"'

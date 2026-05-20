@@ -43,6 +43,7 @@
    AppleScrollerPagingBehavior=true; # jump to the clicked section when clicked on scrollbar
    NSScrollAnimationEnabled=true; # enable smooth scrolling
    NSNavPanelExpandedStateForSaveMode=true; # always use the expanded save panel
+   _HIHideMenuBar=true; # hide the menu bar
 
    # english massacre
    NSAutomaticSpellingCorrectionEnabled=false; # turn off auto-correct
