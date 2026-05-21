@@ -26,6 +26,11 @@
     flake = false;
     };
 
+    homebrew-omniwm = {
+    url = "github:BarutSRB/homebrew-tap";
+    flake = false;
+    };
+
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, homebrew-core, homebrew-cask, ...}:
@@ -78,6 +83,7 @@
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "d12frosted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
+              "BarutSRB/homebrew-tap" = inputs.omni-wm;
             };
             mutableTaps = false; # use flake for repos
           };

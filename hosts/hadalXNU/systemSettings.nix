@@ -12,6 +12,9 @@
    minimize-to-application=true; # minimize to app icon
    show-process-indicators=false; # do not show process indicators
    show-recents=false; # do not show recent applications
+   expose-animation-duration = 0.0; # dock resize time
+   autohide-time-modifier = 0.0;
+   autohide-delay = 0.0;
 
    wvous-tr-corner=3; # top right hot corner displays all windows of focused app
    wvous-tl-corner=1; # top left hot corner is disabled
@@ -44,6 +47,7 @@
    NSScrollAnimationEnabled=true; # enable smooth scrolling
    NSNavPanelExpandedStateForSaveMode=true; # always use the expanded save panel
    _HIHideMenuBar=true; # hide the menu bar
+   NSWindowResizeTime = 0.001; # resize time for yabai
 
    # english massacre
    NSAutomaticSpellingCorrectionEnabled=false; # turn off auto-correct
@@ -54,5 +58,6 @@
 
    hitoolbox.AppleFnUsageType="Do Nothing"; # fn key does nothing.
    SoftwareUpdate.AutomaticallyInstallMacOSUpdates=false; # disable automatic software updates
+   spaces.spans-displays = false; # displays have seperate spaces = true (its counter-intuitive ik)
   };
 }
