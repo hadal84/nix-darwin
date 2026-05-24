@@ -10,6 +10,7 @@
     onActivation.cleanup = "zap"; # enforce strict declerativity
 
     casks = [
+     "omniwm"
     ];
 
     brews = [

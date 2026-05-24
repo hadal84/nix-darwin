@@ -9,7 +9,6 @@
     ./packages/fetch/fetch.nix
     ./packages/skhd/skhd.nix
     ./packages/sketchybar/sketchybar.nix
-    ./packages/yabai/yabai.nix
     ./packages/ghostty/ghostty.nix
   ];
 
@@ -20,7 +19,6 @@
    lsd
    bat
    skhd
-   yabai
    zoxide
    fastfetch
    sketchybar

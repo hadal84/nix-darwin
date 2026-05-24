@@ -6,6 +6,7 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    flake-parts.url = "github:hercules-ci/flake-parts";
 
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
@@ -26,15 +27,36 @@
     flake = false;
     };
 
-    homebrew-omniwm = {
-    url = "github:BarutSRB/homebrew-tap";
+    homebrew-barutsrb = {
+    url = "github:barutSRB/homebrew-tap";
     flake = false;
     };
-
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, homebrew-core, homebrew-cask, ...}:
   let
+
+    flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
+    imports = [
+      # Optional: use external flake logic, e.g.
+      # inputs.foo.flakeModules.default
+    ];
+    flake = {
+      # Put your original flake attributes here.
+    };
+    systems = [
+      "aarch64-darwin"
+    ];
+    perSystem = { config, pkgs, ... }: {
+      # Recommended: move all package definitions here.
+      # e.g. (assuming you have a nixpkgs input)
+      # packages.foo = pkgs.callPackage ./foo/package.nix { };
+      # packages.bar = pkgs.callPackage ./bar/package.nix {
+      #   foo = config.packages.foo;
+      # };
+      };
+    }
+
     configuration = { pkgs, ... }: {
       nix.settings.experimental-features = "nix-command flakes";
 
@@ -83,7 +105,7 @@
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "d12frosted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
-              "BarutSRB/homebrew-tap" = inputs.omni-wm;
+              "barutsrb/homebrew-tap" = inputs.homebrew-barutsrb;
             };
             mutableTaps = false; # use flake for repos
           };
