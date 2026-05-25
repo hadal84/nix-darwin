@@ -17,14 +17,12 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 sketchybar --bar position=top height=35 blur_radius=30 color=0xd4000000 corner_radius=50 margin=10 y_offset=5 border_color=0xd6000000 border_width=3
 
 default=(
-  padding_left=3
-  padding_right=3
+  padding_left=0
+  padding_right=0
   icon.font="CaskaydiaMono Nerd Font Mono:Bold:17.0"
   label.font="CaskaydiaMono Nerd Font Mono:Bold:14.0"
   icon.color=0xffffffff
   label.color=0xffffffff
-  icon.padding_left=4
-  icon.padding_right=4
   label.padding_left=4
   label.padding_right=4
 )
@@ -42,8 +40,10 @@ for sid in $(omniwmctl query workspaces | jq -r '.result.payload.workspaces[].nu
     sketchybar --add item space.$sid left \
         --subscribe space.$sid omni_workspace_change \
         --set space.$sid \
+	label.padding_left=8 \
+	label.padding_right=8 \
         background.color=0x44ffffff \
-        background.corner_radius=5 \
+        background.corner_radius=10 \
         background.height=20 \
         background.drawing=off \
         label="$sid" \
@@ -62,19 +62,23 @@ omniwmctl watch active-workspace --exec bash -c '
 
 # COMPONENT: focused app indicator on the LEFT
 sketchybar --add item chevron left \
-           --set chevron icon= label.drawing=off \
+           --set chevron icon="" \
+	         icon.padding_right=2 \
+	         icon.padding_left=2 \
+                 label.drawing=off \
+		 padding_right=5 \
            --add item front_app left \
-           --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
+           --set front_app icon.drawing=off \
+                 script="$PLUGIN_DIR/front_app.sh" \
+		 padding_left=0 \
            --subscribe front_app front_app_switched
 
-# COMPONENT: clock on the RIGHT
+# COMPONENT: clock, volume, battery on the RIGHT
 sketchybar --add item clock right \
            --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
-# COMPONENT: volume indicator on the RIGHT
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change \
-# COMPONENT: battrry indicator on the RIGHT
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
