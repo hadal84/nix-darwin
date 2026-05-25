@@ -4,7 +4,6 @@
 # fi
 
 # paths
-export PATH=$PATH:/Users/cinaremir/.spicetify
 export PATH="$HOME/.config/emacs/bin:$PATH"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
@@ -29,9 +28,6 @@ alias cleanup="sudo nix-collect-garbage -d"
 # pure
 autoload -U promptinit; promptinit
 prompt pure
-
-# ssh phenoxide
-alias phenoxide="ssh hadal84@140.86.212.251 -i /Users/cinaremir/Documents/zumrutKitaplik/code/obfuscation/Phenoxide/ssh/ssh-key-2026-04-08.key"
 
 # simple macos utilities
 alias gatekeeper="xattr -d com.apple.quarantine"
