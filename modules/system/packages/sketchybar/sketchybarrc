@@ -1,3 +1,17 @@
+#!/usr/bin/env bash
+
+# i dont usually add comments to my code but pure bash like this makes me lose my shit
+
+# export omniwmctl
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/run/current-system/sw/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/OmniWM.app/Contents/MacOS:$PATH"
+
+# debug
+exec > /tmp/sketchybar_boot.log 2>&1
+set -x # Enable command tracing
+echo "=== SKETCHYBAR BOOT: $(date) ==="
+which omniwmctl || echo "FATAL: omniwmctl not in PATH"
+which jq || echo "FATAL: jq not in PATH"
+
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
 sketchybar --bar position=top height=35 blur_radius=30 color=0xd4000000 corner_radius=50 margin=10 y_offset=5 border_color=0xd6000000 border_width=3
@@ -16,41 +30,54 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
+# COMPONENT: OmniWM Workspace Tray
+# 1. register the custom event bus
+sketchybar --add event omni_workspace_change
 
+# 2. prevents race conditions on system boot
+for i in {1..10}; do omniwmctl ping >/dev/null 2>&1 && break || sleep 0.5; done
 
-##### Adding Left Items #####
-# We add some regular items to the left side of the bar, where
-# only the properties deviating from the current defaults need to be set
+# 3. generate workspace items based on current state
+for sid in $(omniwmctl query workspaces | jq -r '.result.payload.workspaces[].number'); do
+    sketchybar --add item space.$sid left \
+        --subscribe space.$sid omni_workspace_change \
+        --set space.$sid \
+        background.color=0x44ffffff \
+        background.corner_radius=5 \
+        background.height=20 \
+        background.drawing=off \
+        label="$sid" \
+        click_script="omniwmctl command switch-workspace $sid" \
+        script="$CONFIG_DIR/plugins/omniwm.sh $sid"
+done
 
+# 4. manage the IPC consumer lifecycle
+pkill -f "omniwmctl watch active-workspace"
+
+# spawn the event listener as a background daemon.
+omniwmctl watch active-workspace --exec bash -c '
+    TARGET=$(jq -r ".result.payload.workspace.number" <&0)
+    sketchybar --trigger omni_workspace_change TARGET_WORKSPACE="$TARGET"
+' &
+
+# COMPONENT: focused app indicator on the LEFT
 sketchybar --add item chevron left \
            --set chevron icon= label.drawing=off \
            --add item front_app left \
            --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
            --subscribe front_app front_app_switched
 
-##### Adding Right Items #####
-# In the same way as the left items we can add items to the right side.
-# Additional position (e.g. center) are available, see:
-# https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
-
-# Some items refresh on a fixed cycle, e.g. the clock runs its script once
-# every 10s. Other items respond to events they subscribe to, e.g. the
-# volume.sh script is only executed once an actual change in system audio
-# volume is registered. More info about the event system can be found here:
-# https://felixkratz.github.io/SketchyBar/config/events
-
+# COMPONENT: clock on the RIGHT
 sketchybar --add item clock right \
            --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
+# COMPONENT: volume indicator on the RIGHT
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change \
+# COMPONENT: battrry indicator on the RIGHT
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
 
-##### Force all scripts to run the first time (never do this in a script) #####
+# reload all scripts one last time
 sketchybar --update
-
-pkill -f "omniWatcher.sh"
-"$HOME/.config/sketchybar/plugins/omniWatcher.sh" &
-sketchybar --trigger omniwm_workspace_change

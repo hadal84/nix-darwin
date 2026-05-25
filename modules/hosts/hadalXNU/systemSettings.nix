@@ -1,9 +1,6 @@
 { pkgs, config, ... }:
 
 {
-  # imports = [
-  #    ];
-
   system.defaults = {
 
    dock = {
@@ -56,8 +53,22 @@
    NSAutomaticCapitalizationEnabled=false; # god forbid a girl aura farm
    };
 
+   CustomUserPreferences = {
+    "com.apple.desktopservices" = {
+      # Avoid creating .DS_Store files on network or USB volumes
+      DSDontWriteNetworkStores = true;
+      DSDontWriteUSBStores = true;
+     };
+   };
+
    hitoolbox.AppleFnUsageType="Do Nothing"; # fn key does nothing.
    SoftwareUpdate.AutomaticallyInstallMacOSUpdates=false; # disable automatic software updates
    spaces.spans-displays = false; # displays have seperate spaces = true (its counter-intuitive ik)
   };
+
+  system.activationScripts.postActivation.text = ''
+  echo "Purging .DS_Store files from configuration tree..."
+  find /Users/hadal84/nix-darwin -name ".DS_Store" -type f -delete
+  '';
+
 }

@@ -18,6 +18,8 @@ alias ls="lsd"
 alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias reloadbar="sketchybar --reload"
 alias x=exit
+alias history="history | grep -v history | grep"
+alias nixlavat="lavat -g -c bd8bfa -k 52a3ff -b 8 -r 10 -R 3 -G"
 
 # nix
 alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec zsh"

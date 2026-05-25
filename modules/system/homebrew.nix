@@ -1,11 +1,7 @@
 { pkgs, config, inputs, ... }:
 
 {
-  imports = [
-    ./packages/zellij/zellij.nix
-  ];
-
-  homebrew = {
+    homebrew = {
     enable=true;
     onActivation.cleanup = "zap"; # enforce strict declerativity
 

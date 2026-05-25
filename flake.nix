@@ -7,6 +7,7 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:denful/import-tree";
 
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
@@ -33,87 +34,14 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nix-homebrew, homebrew-core, homebrew-cask, ...}:
-  let
+  outputs = inputs@{ flake-parts, ... }:
 
-    flake-parts.lib.mkFlake { inherit inputs; } (top@{ config, withSystem, moduleWithSystem, ... }: {
-    imports = [
-      # Optional: use external flake logic, e.g.
-      # inputs.foo.flakeModules.default
-    ];
-    flake = {
-      # Put your original flake attributes here.
-    };
-    systems = [
-      "aarch64-darwin"
-    ];
-    perSystem = { config, pkgs, ... }: {
-      # Recommended: move all package definitions here.
-      # e.g. (assuming you have a nixpkgs input)
-      # packages.foo = pkgs.callPackage ./foo/package.nix { };
-      # packages.bar = pkgs.callPackage ./bar/package.nix {
-      #   foo = config.packages.foo;
-      # };
-      };
-    }
+  flake-parts.lib.mkFlake { inherit inputs; } {
+     systems = [ "aarch64-darwin" ];
 
-    configuration = { pkgs, ... }: {
-      nix.settings.experimental-features = "nix-command flakes";
-
-      # set Git commit hash for darwin-version.
-      system.configurationRevision = self.rev or self.dirtyRev or null;
-
-      # used for backwards compatibility 
-      # $ darwin-rebuild changelog
-      system.stateVersion = 6;
-
-      system.primaryUser = "hadal84";
-
-      # aarch64 darwin
-      nixpkgs.hostPlatform = "aarch64-darwin";
-
-      nixpkgs.config.allowUnfree = true;
-
-      users.users.hadal84 = {
-        name = "hadal84";
-        home = /Users/hadal84;
-      };
-    };
-  in
-  {
-    # $ darwin-rebuild build --flake .#xnu
-    darwinConfigurations."xnu" = nix-darwin.lib.darwinSystem {
-      specialArgs = { 
-        inherit inputs;
-        selfPath = "/Users/hadal84/nix-darwin"; 
-      };
-      modules = [ 
-      home-manager.darwinModules.home-manager {
-       home-manager.useGlobalPkgs = true;
-       home-manager.useUserPackages = true;
-       home-manager.users.hadal84 = import ./home/hadal84.nix;
-      }
-      configuration
-      ./modules/system/packages.nix 
-      ./hosts/hadalXNU/systemSettings.nix 
-      nix-homebrew.darwinModules.nix-homebrew {
-	nix-homebrew = {
-            enable = true;
-            enableRosetta = true;
-            user = "hadal84";
-            taps = {
-              "homebrew/homebrew-core" = homebrew-core;
-              "homebrew/homebrew-cask" = homebrew-cask;
-              "d12frosted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
-              "barutsrb/homebrew-tap" = inputs.homebrew-barutsrb;
-            };
-            mutableTaps = false; # use flake for repos
-          };
-        }
-       ({config, ...}: {
-          homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
-        })
-      ];
-    };
+     imports = [
+       (inputs.import-tree ./modules/flake)
+     ];
   };
+
 }

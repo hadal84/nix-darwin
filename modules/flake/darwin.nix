@@ -26,15 +26,17 @@ in
       modules = [
         inputs.home-manager.darwinModules.home-manager
         {
+          home-manager.extraSpecialArgs = { 
+            inherit inputs; 
+          };
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          # Path adjusted relative to modules/flake/darwin.nix
-          home-manager.users.hadal84 = import ../../home/hadal84.nix;
+          home-manager.users.hadal84 = import ../../modules/home/hadal84.nix;
         }
         configuration
         
-        ../../modules/system/packages.nix 
-        ../../hosts/hadalXNU/systemSettings.nix 
+	(inputs.import-tree ../system)
+	(inputs.import-tree ../hosts)
         
         inputs.nix-homebrew.darwinModules.nix-homebrew
         {

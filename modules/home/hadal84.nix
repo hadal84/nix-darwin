@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, config, inputs, ... }:
 
 {
   home.username = "hadal84";
@@ -6,6 +6,6 @@
   home.stateVersion = "25.11"; 
   programs.home-manager.enable = true;
   imports = [
-    ./userModules/packages.nix
+   (inputs.import-tree ./userModules) 
   ];
 }

@@ -55,7 +55,7 @@
         },
         {
             "type": "wm",
-            "format": "yabai",
+            "format": "omniWM",
             "key": "window manager ",
             "keyColor": "15",
         },
