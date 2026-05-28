@@ -46,6 +46,7 @@ in
             user = "hadal84";
             taps = {
               "homebrew/homebrew-core" = inputs.homebrew-core;
+              "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
               "homebrew/homebrew-cask" = inputs.homebrew-cask;
               "d12frosted/homebrew-emacs-plus" = inputs.homebrew-emacs-plus;
               "barutsrb/homebrew-tap" = inputs.homebrew-barutsrb;

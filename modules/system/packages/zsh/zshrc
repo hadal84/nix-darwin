@@ -32,5 +32,6 @@ prompt pure
 # simple macos utilities
 alias gatekeeper="xattr -d com.apple.quarantine"
 alias ccache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder && echo DNS cache cleared."
+alias fixmount="sudo pkill -f fsck"
 
 eval "$(zoxide init zsh --cmd cd)"
