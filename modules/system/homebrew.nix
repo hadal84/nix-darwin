@@ -40,13 +40,13 @@
      "transmission"
      "utm"
      "vlc"
-     "zen"
      "zotero"
     ];
 
     brews = [
      "pure"
      "zellij"
+     "nicotine-plus"
     ];
 
     taps = builtins.attrNames config.nix-homebrew.taps; 

@@ -7,5 +7,6 @@
   programs.home-manager.enable = true;
   imports = [
    (inputs.import-tree ./userModules) 
+   inputs.zen-browser.homeModules.twilight
   ];
 }

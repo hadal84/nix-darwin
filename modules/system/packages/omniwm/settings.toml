@@ -25,7 +25,7 @@ maxTotalBytes = 67108864
 [dwindle]
 defaultSplitRatio = 1.0
 moveToRootStable = true
-singleWindowAspectRatio = "4:3"
+singleWindowAspectRatio = "fill"
 smartSplit = false
 splitWidthMultiplier = 1.0
 useGlobalGaps = true

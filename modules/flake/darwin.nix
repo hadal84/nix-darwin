@@ -9,6 +9,7 @@ let
     system.primaryUser = "hadal84";
     nixpkgs.hostPlatform = "aarch64-darwin";
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.overlays = [ inputs.nur.overlays.default ];
 
     users.users.hadal84 = {
       name = "hadal84";
@@ -22,6 +23,11 @@ in
       specialArgs = { 
         inherit inputs;
         selfPath = "/Users/hadal84/nix-darwin"; 
+
+        pkgs-stable = import inputs.nixpkgs-stable { 
+          system = "aarch64-darwin"; 
+          config.allowUnfree = true;
+        };
       };
       modules = [
         inputs.home-manager.darwinModules.home-manager
@@ -34,6 +40,7 @@ in
           home-manager.users.hadal84 = import ../../modules/home/hadal84.nix;
         }
         configuration
+        inputs.agenix.darwinModules.default
         
 	(inputs.import-tree ../system)
 	(inputs.import-tree ../hosts)

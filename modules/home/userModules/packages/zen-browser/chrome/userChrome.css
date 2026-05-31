@@ -1,0 +1,82 @@
+
+:root {
+    --zen-colors-primary: #000000 !important;
+    --zen-colors-secondary: #0b0b0b !important;
+    --zen-colors-tertiary: #000000 !important;
+    --zen-colors-border: ##bfbfbf !important;
+}
+
+      }
+:root {
+    --zen-colors-primary: color-mix(in srgb, var(--zen-primary-color) 0%, black 100%) !important;
+    --zen-colors-secondary: color-mix(in srgb, var(--zen-primary-color) 100%, black 0%) !important;
+    --zen-colors-tertiary: color-mix(in srgb, var(--zen-primary-color) 0%, black 100%) !important;
+    --zen-colors-border: color-mix(in srgb, var(--zen-colors-primary) 0%, white 80%) !important;
+    --zen-primary-color: #bfbfbf !important;
+
+    --tab-selected-outline-color: #ccc !important; /* Or transparent */
+    --tab-outline: none !important; /* Just in case */
+    --tab-outline-offset: 0px !important;
+}
+
+tab-group[split-view-group] {
+  outline: none !important;
+  outline-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#bookmarks-bar {
+    opacity: 0 !important;
+    transition: opacity 0.2s !important;
+}
+#bookmarks-bar:hover {
+    opacity: 1 !important;
+}
+
+/* Apply rounded corners and black margins to tabs */
+.tab {
+    border-radius: 8px !important;
+    margin: 3px !important;
+    background-color: #000000 !important;
+    border: 1px solid #333 !important;
+}
+
+/* Style the address bar with black borders and rounding */
+#omnibox {
+    border-radius: 20px !important;
+    border: 2px solid #000000 !important;
+    background-color: #111 !important;
+}
+
+/* Round toolbar buttons and set black background */
+.toolbar-button {
+    border-radius: 6px !important;
+    background-color: #000000 !important;
+    margin: 2px !important;
+}
+
+/* Adjust the main toolbar's margins and padding */
+#toolbar {
+    padding: 4px !important;
+    background-color: #000000 !important;
+    border-radius: 8px !important;
+}
+
+/* Optional: Round the browser window corners (may vary by OS) */
+#browser {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background-color: #000 !important;
+}
+
+.tab-context-line {
+    display: none !important;
+}
+#tabbrowser-tabs {
+    & .tabbrowser-tab {
+        &[selected] .tab-background {
+            border: 2px solid var(--identity-icon-color) !important;
+            opacity: 0 !important;
+        }
+    }
+}

@@ -14,4 +14,15 @@
     };
   };
 
+  launchd.user.agents.ghostty = {
+    command = "/Applications/Nix Apps/Ghostty.app";
+    
+    serviceConfig = {
+      RunAtLoad = true;
+      KeepAlive = true; 
+      ProcessType = "Interactive"; 
+      StandardOutPath = "/tmp/ghostty.out.log";
+      StandardErrorPath = "/tmp/ghostty.err.log";
+    };
+  };
 }
