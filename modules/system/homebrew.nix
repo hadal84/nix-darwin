@@ -3,7 +3,6 @@
 {
     homebrew = {
     enable=true;
-    onActivation.cleanup = "zap"; # enforce strict declerativity
 
     casks = [
      "omniwm"
@@ -41,6 +40,8 @@
      "utm"
      "vlc"
      "zotero"
+     "whatsapp"
+     "zen"
     ];
 
     brews = [
@@ -49,7 +50,19 @@
      "nicotine-plus"
     ];
 
-    taps = builtins.attrNames config.nix-homebrew.taps; 
+    masApps = {
+      "DaVinci Resolve" = 571213070;
+      "Goodnotes" = 1444383602;
+    };
 
+    onActivation = {
+      cleanup = "zap";
+      
+      extraFlags = [
+        "--force-cleanup"
+      ];
+    };
+
+    taps = builtins.attrNames config.nix-homebrew.taps; 
  };
 }

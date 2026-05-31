@@ -1,0 +1,85 @@
+[user]
+	name = hadal84
+	email = hadal84@proton.me
+	username = hadal84
+[core]
+	editor = vim
+	pager = delta
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = master
+[checkout]
+	defaultRemote = origin
+[rerere]
+	enabled = 1
+	autoupdate = 1
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+	tool = nvimdiff
+[difftool]
+	prompt = false
+[push]
+	autoSetupRemote = true
+	followTags = true
+	useForceIfIncludes = true
+	default = matching
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rebase]
+	autoSquash = true
+	updateRefs = true
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[instaweb]
+	httpd = apache2 -f
+[delta]
+	features = line-numbers decorations
+	line-numbers = true
+[delta "decorations"]
+	minus-style = red bold normal
+	plus-style = green bold normal
+	minus-emph-style = white bold red
+	minus-non-emph-style = red bold normal
+	plus-emph-style = white bold green
+	plus-non-emph-style = green bold normal
+	file-style = yellow bold none
+	file-decoration-style = yellow box
+	hunk-header-style = magenta bold
+	hunk-header-decoration-style = magenta box
+	minus-empty-line-marker-style = normal normal
+	plus-empty-line-marker-style = normal normal
+	line-numbers-right-format = "{np:^4}│ "
+[trim]
+	bases = master,main
+	protected = *production
+[sequence]
+	editor = interactive-rebase-tool
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]

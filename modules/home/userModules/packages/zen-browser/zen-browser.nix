@@ -9,7 +9,8 @@ in
 {
   programs.zen-browser = {
     enable = true;
-    package = inputs.zen-browser.packages."${pkgs.system}".twilight;
+
+    package = null;
 
     profiles.default = {
       isDefault = true;

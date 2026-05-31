@@ -15,7 +15,7 @@
   };
 
   launchd.user.agents.ghostty = {
-    command = "/Applications/Nix Apps/Ghostty.app";
+    command = "open -na /Applications/Nix Apps/Ghostty.app";
     
     serviceConfig = {
       RunAtLoad = true;
