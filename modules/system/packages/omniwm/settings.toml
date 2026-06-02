@@ -576,7 +576,7 @@ binding = "Unassigned"
 id = "toggleQuakeTerminal"
 
 [[hotkeys]]
-binding = "Shift+Command+E"
+binding = "Shift+Command+C"
 id = "toggleWorkspaceLayout"
 
 [[hotkeys]]
@@ -593,7 +593,7 @@ type = "main"
 
 [[workspaces]]
 id = "454CECD4-5E9D-4ED1-95D7-979D48817F5F"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "2"
 
 [workspaces.monitorAssignment]
@@ -601,7 +601,7 @@ type = "main"
 
 [[workspaces]]
 id = "898664BE-2A96-4309-BCB5-DE473C467419"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "3"
 
 [workspaces.monitorAssignment]
@@ -609,7 +609,7 @@ type = "main"
 
 [[workspaces]]
 id = "8F5903FE-AF8A-492F-9C99-B486C7AD94AC"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "4"
 
 [workspaces.monitorAssignment]
@@ -617,7 +617,7 @@ type = "main"
 
 [[workspaces]]
 id = "1E4B6F11-B268-4095-A3C1-1F909532905C"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "5"
 
 [workspaces.monitorAssignment]
@@ -625,7 +625,7 @@ type = "main"
 
 [[workspaces]]
 id = "C156ED00-0986-4285-8367-914D1DF1C570"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "6"
 
 [workspaces.monitorAssignment]
@@ -633,7 +633,7 @@ type = "main"
 
 [[workspaces]]
 id = "31966180-8527-449C-84A2-CBBD947214FD"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "7"
 
 [workspaces.monitorAssignment]
@@ -641,7 +641,7 @@ type = "main"
 
 [[workspaces]]
 id = "265DFDE0-6D5A-49CE-A246-E23ADBFA2F67"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "8"
 
 [workspaces.monitorAssignment]
@@ -649,7 +649,7 @@ type = "main"
 
 [[workspaces]]
 id = "A2E2D246-2F01-49C1-B041-D530BAC067C6"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "9"
 
 [workspaces.monitorAssignment]
@@ -657,7 +657,7 @@ type = "main"
 
 [[workspaces]]
 id = "18FDA67C-AB6B-4690-A1B9-222A1FEF2C75"
-layoutType = "dwindle"
+layoutType = "niri"
 name = "10"
 
 [workspaces.monitorAssignment]

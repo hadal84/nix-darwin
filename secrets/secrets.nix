@@ -7,4 +7,6 @@ let
 in
 {
   "github-ssh-key.age".publicKeys = users ++ systems;
+  "rclone.age".publicKeys = users ++ systems;
+  "hydroxide.age".publicKeys = users ++ systems;
 }

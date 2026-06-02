@@ -1,3 +1,0 @@
-cmd + shift - z : open -na '/Applications/Zen.app'
-cmd + shift - f : osascript -e 'tell application "Finder" to set target of (make new Finder window) to folder "Desktop" of home' -e 'activate application "Finder"'
-

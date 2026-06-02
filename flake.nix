@@ -10,6 +10,7 @@
     import-tree.url = "github:denful/import-tree";
     nur.url = "github:nix-community/NUR";
     agenix.url = "github:ryantm/agenix";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
@@ -27,7 +28,7 @@
     };
 
     brew-src = {
-      url = "github:homebrew/brew";
+      url = "github:homebrew/brew/90518a33394b6a72a0cb544a8ab90be523011b19";
       flake = false;
     };
 
@@ -56,6 +57,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    doomemacs-src = {
+      url = "github:doomemacs/doomemacs";
+      flake = false;
+    };
+
   };
 
   outputs = inputs@{ flake-parts, ... }:
@@ -64,7 +70,7 @@
      systems = [ "aarch64-darwin" ];
 
      imports = [
-       (inputs.import-tree ./modules/flake)
+       (inputs.import-tree ./flake/xnu)
      ];
   };
 

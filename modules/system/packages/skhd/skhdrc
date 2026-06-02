@@ -1,0 +1,12 @@
+cmd + shift - z : open -na '/Applications/Zen.app'
+cmd + shift - f : osascript -e 'tell application "Finder" to set target of (make new Finder window) to folder "Desktop" of home' -e 'activate application "Finder"'
+cmd + shift - e: open -a "Emacs Client"
+
+# capture whole screen and save to default location
+rcmd + shift - 3 : /usr/sbin/screencapture -m "~/Desktop/presentDay.png"
+
+# interactive selection mode
+rcmd + shift - 4 : /usr/sbin/screencapture -i "~/Desktop/presentTime.png"
+
+# launch the native screen cecording
+rcmd + shift - 5 : /usr/bin/open -a /System/Applications/Utilities/Screenshot.app

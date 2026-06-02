@@ -68,6 +68,25 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  
+  system.defaults.CustomUserPreferences = {
+    "com.apple.symbolichotkeys" = {
+      AppleSymbolicHotKeys = {
+        # disable "save picture of screen as a file" (cmd + shift + 3)
+        "28" = { enabled = false; };
+        # disable "copy picture of screen to the clipboard" (ctrl + cmd + shift + 3)
+        "29" = { enabled = false; };
+        # disable "save picture of selected area as a file" (cmd + shift + 4)
+        "30" = { enabled = false; };
+        # disable "copy picture of selected area to the clipboard" (ctrl + cmd + shift + 4)
+        "31" = { enabled = false; };
+        # disable "screenshot and recording options" (cmd + shift + 5)
+        "184" = { enabled = false; };
+      };
+     };
+  };
+  
+
   system.activationScripts.postActivation.text = ''
   echo "Purging .DS_Store files from configuration tree..."
   find /Users/hadal84/nix-darwin -name ".DS_Store" -type f -delete

@@ -5,6 +5,7 @@
 
 # paths
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export DOOMLOCALDIR="$HOME/.local/share/doom"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # aliases

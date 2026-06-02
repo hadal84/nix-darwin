@@ -6,6 +6,7 @@
 
     casks = [
      "omniwm"
+     "alfred"
      "affinity"
      "android-file-transfer"
      "android-studio"
@@ -20,7 +21,7 @@
      "emacs-plus-app"
      "ente"
      "freecad"
-     "google-drive"
+     "fuse-t"
      "grandperspective"
      "keka"
      "kid3"
@@ -30,10 +31,8 @@
      "obs"
      "obsidian"
      "prismlauncher"
-     "proton-mail-bridge"
      "qgis"
      "raspberry-pi-imager"
-     "spotify"
      "stremio"
      "tor-browser"
      "transmission"
