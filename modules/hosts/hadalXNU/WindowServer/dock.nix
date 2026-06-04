@@ -25,5 +25,6 @@
     "/System/Applications/Utilities/Activity Monitor.app"
     "/Applications/KiCad/KiCad.app"
     "/Applications/FreeCAD.app"
+    "/Applications/Clash Verge.app"
   ];
 }
