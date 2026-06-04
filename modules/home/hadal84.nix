@@ -9,5 +9,6 @@
    (inputs.import-tree ./userModules) 
    inputs.zen-browser.homeModules.beta
    inputs.spicetify-nix.homeManagerModules.default
+   inputs.nix-doom-emacs-unstraightened.homeModule
   ];
 }

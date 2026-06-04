@@ -1,0 +1,64 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#FEFFFFC4",
+        "font" : "Helvetica Neue UltraLight Italic",
+        "color" : "#F3FFF965"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "CaskaydiaMono Nerd Font Mono",
+        "color" : "#FF84FFFF"
+      },
+      "backgroundSelected" : "#000000CC",
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#EFFCFFFF",
+        "font" : "Helvetica Neue UltraLight",
+        "color" : "#FEFFFFE5"
+      },
+      "iconPaddingHorizontal" : 4,
+      "roundness" : 11,
+      "paddingVertical" : 7,
+      "iconSize" : 40
+    },
+    "search" : {
+      "backgroundSelected" : "#FEFFFFFF",
+      "paddingHorizontal" : 8,
+      "spacing" : 8,
+      "text" : {
+        "size" : 31,
+        "colorSelected" : "#000000FF",
+        "font" : "Helvetica Neue UltraLight",
+        "color" : "#FEFFFFFF"
+      },
+      "background" : "#000000CC",
+      "roundness" : 18,
+      "paddingVertical" : 5
+    },
+    "window" : {
+      "color" : "#000000CA",
+      "paddingHorizontal" : 9,
+      "width" : 463,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 0,
+      "roundness" : 20,
+      "paddingVertical" : 7
+    },
+    "credit" : "hadal",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#F8FFF6FF",
+      "thickness" : 0
+    },
+    "name" : "Amoled"
+  }
+}

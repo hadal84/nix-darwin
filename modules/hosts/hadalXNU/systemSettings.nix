@@ -82,7 +82,15 @@
         "31" = { enabled = false; };
         # disable "screenshot and recording options" (cmd + shift + 5)
         "184" = { enabled = false; };
-      };
+
+        "64" = {
+          enabled = false;
+          value = {
+            parameters = [ 32 49 1048576 ];
+            type = "standard";
+          };
+        };
+       };
      };
   };
   

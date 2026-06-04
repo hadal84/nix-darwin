@@ -11,6 +11,7 @@
     nur.url = "github:nix-community/NUR";
     agenix.url = "github:ryantm/agenix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
 
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
@@ -37,11 +38,6 @@
       inputs.brew-src.follows = "brew-src"; 
     };
 
-    homebrew-emacs-plus = {
-      url = "github:d12frosted/homebrew-emacs-plus";
-      flake = false;
-    };
-
     homebrew-barutsrb = {
       url = "github:barutSRB/homebrew-tap";
       flake = false;
@@ -55,11 +51,6 @@
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    doomemacs-src = {
-      url = "github:doomemacs/doomemacs";
-      flake = false;
     };
 
   };

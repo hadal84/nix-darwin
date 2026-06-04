@@ -1,0 +1,42 @@
+# zellij
+# if [[ -z "$ZELLIJ" && $- == *i* ]] && command -v zellij > /dev/null; then
+#    exec zellij attach -c
+# fi
+
+# paths
+export PATH="$HOME/.config/emacs/bin:$PATH"
+export EDITOR="emacsclient -c -a ''"
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+
+# aliases
+alias fetch="fastfetch"
+alias cat="bat"
+alias python="python3"
+alias pip="pip3"
+alias tmacs="emacs -nw"
+alias ls="lsd"
+alias rm="trash"
+alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
+alias reloadbar="sketchybar --reload"
+alias x=exit
+alias history="history | grep -v history | grep"
+alias nixlavat="lavat -g -c bd8bfa -k 52a3ff -b 8 -r 10 -R 3 -G"
+
+# nix
+alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec zsh"
+alias update="sudo nix flake update && rebuild"
+alias cleanup="sudo nix-collect-garbage -d"
+
+# phenoxide
+alias phenoxide="ssh phenoxide"
+
+# pure
+autoload -U promptinit; promptinit
+prompt pure
+
+# simple macos utilities
+alias gatekeeper="xattr -d com.apple.quarantine"
+alias ccache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder && echo DNS cache cleared."
+alias fixmount="sudo pkill -f fsck"
+
+eval "$(zoxide init zsh --cmd cd)"
