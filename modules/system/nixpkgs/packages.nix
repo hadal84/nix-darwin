@@ -10,6 +10,7 @@
    bat
    skhd
    tree
+   btop
    lavat
    cmake
    delta
@@ -33,6 +34,8 @@
    python314Packages.pytest
 
    ghostty-bin
+   vesktop
+   obsidian
    sioyek
    cinny-desktop
 

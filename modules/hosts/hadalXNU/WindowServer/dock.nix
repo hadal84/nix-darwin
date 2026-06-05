@@ -2,14 +2,14 @@
 
 {
   system.defaults.dock.persistent-apps = [
-    "/Applications/Zen.app"
+    "/Users/hadal84/Applications/Home Manager Apps/Zen Browser (Beta).app"
     "/Users/hadal84/Applications/Home Manager Apps/Emacs.app"
     "/Applications/Nix Apps/sioyek.app"
     "/Applications/Nix Apps/Ghostty.app"
-    "/Applications/Obsidian.app"
+    "/Applications/Nix Apps/Obsidian.app"
     "/Users/hadal84/Applications/Home Manager Apps/Spotify.app"
     "/Applications/Thunderbird.app"
-    "/Applications/Vesktop.app"
+    "/Applications/Nix Apps/Vesktop.app"
     "/Applications/Affinity.app"
     "/Applications/DaVinci Resolve.app" 
     "/Applications/UTM.app"

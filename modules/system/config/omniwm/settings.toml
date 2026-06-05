@@ -583,6 +583,14 @@ id = "toggleWorkspaceLayout"
 binding = "Unassigned"
 id = "toggleOverview"
 
+[[hotkeys]]
+binding = "Shift+Command+R"
+id = "toggleFocusedWindowFloating"
+
+[[hotkeys]]
+binding = "Shift+Command+Up Arrow"
+id = "raiseAllFloatingWindows"
+
 [[workspaces]]
 id = "03DB2CF1-BCDA-4314-B0F5-2FF863CF7653"
 layoutType = "niri"

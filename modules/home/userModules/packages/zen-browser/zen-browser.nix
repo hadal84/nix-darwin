@@ -10,8 +10,6 @@ in
   programs.zen-browser = {
     enable = true;
 
-    package = null;
-
     profiles.default = {
       isDefault = true;
 
