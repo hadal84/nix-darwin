@@ -2,6 +2,8 @@
 
 # i dont usually add comments to my code but pure bash like this makes me lose my shit
 
+source "$HOME/.config/sketchybar/colors.sh"
+
 # export omniwmctl
 export PATH="$HOME/.local/bin:/opt/homebrew/bin:/run/current-system/sw/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/OmniWM.app/Contents/MacOS:$PATH"
 
@@ -14,15 +16,15 @@ which jq || echo "FATAL: jq not in PATH"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
-sketchybar --bar position=top height=35 blur_radius=30 color=0xd4000000 corner_radius=50 margin=10 y_offset=5 border_color=0xd6000000 border_width=3
+sketchybar --bar position=top height=35 blur_radius=30 color=$BAR corner_radius=50 margin=10 y_offset=5 border_color=$BORDER_COLOR border_width=3
 
 default=(
   padding_left=0
   padding_right=0
   icon.font="CaskaydiaMono Nerd Font Mono:Bold:17.0"
   label.font="CaskaydiaMono Nerd Font Mono:Bold:14.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
+  icon.color=$ACCENT_SYS
+  label.color=$TEXT
   label.padding_left=4
   label.padding_right=4
 )
@@ -42,7 +44,7 @@ for sid in $(omniwmctl query workspaces | jq -r '.result.payload.workspaces[].nu
         --set space.$sid \
 	label.padding_left=8 \
 	label.padding_right=8 \
-        background.color=0x44ffffff \
+        background.color=$ACCENT_SEC \
         background.corner_radius=10 \
         background.height=20 \
         background.drawing=off \
