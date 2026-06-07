@@ -9,9 +9,13 @@
   launchd.user.agents.rclone-gdrive = {
     command = toString (pkgs.writeShellScript "mount-gdrive" ''
       mkdir -p "$HOME/Google Drive"
+      mkdir -p "$HOME/.config/rclone"
+
+      cp -f ${config.age.secrets.rclone-config.path} "$HOME/.config/rclone/rclone.conf"
+      chmod 600 "$HOME/.config/rclone/rclone.conf"
 
       exec ${pkgs.rclone}/bin/rclone mount gdrive: "$HOME/Google Drive" \
-        --config ${config.age.secrets.rclone-config.path} \
+        --config "$HOME/.config/rclone/rclone.conf" \
         --vfs-cache-mode full \
         --vfs-cache-max-age 24h \
         --vfs-cache-max-size 10G \

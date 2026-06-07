@@ -38,6 +38,7 @@
      "raspberry-pi-imager"
      "stremio"
      "tor-browser"
+     "ungoogled-chromium"
      "vlc"
     ];
 
@@ -50,6 +51,7 @@
     masApps = {
       "DaVinci Resolve" = 571213070;
       "Goodnotes" = 1444383602;
+      "WireGuard" = 1451685025;
     };
 
     onActivation = {

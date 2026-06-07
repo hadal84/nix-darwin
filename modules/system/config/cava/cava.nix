@@ -12,5 +12,16 @@ home-manager.users.hadal84 = { config, ... }: {
     "cava/themes".source =
       config.lib.file.mkOutOfStoreSymlink "${selfPath}/modules/system/config/cava/themes";
     };
+
+    programs.cava = {
+      enable=true;
+      package=pkgs.cava;
+    };
+
+    stylix.targets.cava = {
+      enable=true;
+      colors.enable=true;
+      rainbow.enable=true;
+    };
   };
 }

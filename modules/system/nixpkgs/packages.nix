@@ -7,6 +7,7 @@
    vim
    git
    lsd
+   fzf
    bat
    skhd
    tree

@@ -1,7 +1,6 @@
 font-family = "CaskaydiaMono Nerd Font Mono"
 font-style = "Bold"
 font-size = 20
-theme = Atom
 background = #000000
 gtk-tabs-location=bottom
 macos-titlebar-proxy-icon=hidden

@@ -7,6 +7,7 @@ in
   programs.spicetify = {
     enable = true;
 
+    /*
     theme = {
       name = "Blackout";
       src = "${pkgs.fetchFromGitHub {
@@ -19,17 +20,22 @@ in
       replaceColors = true;
       overwriteAssets = true;
     };
+    */
 
-    enabledExtensions = [
+
+    enabledExtensions = with spicePkgs.extensions; [
+    /*
      ({
         name = "spicy-lyrics.mjs";
         src = "${pkgs.fetchFromGitHub {
           owner = "Spikerko";
           repo = "spicy-lyrics";
-          rev = "main"; 
+          rev = "v1.0.0"; 
           hash = "sha256-Bq+he9pdFWfzSGn050IpYWrf5pRtmd1cfPPqzbCoqa0="; 
         }}/builds";
-      }) 
+      })
+    */
+      spicyLyrics
       ({
         name = "noControls.js";
         src = "${pkgs.fetchFromGitHub {
@@ -92,4 +98,6 @@ in
     /usr/bin/chflags uchg "$SPOTIFY_UPDATE_DIR"
   fi
   ''; 
+
+  stylix.targets.spicetify.enable=true;
 }
