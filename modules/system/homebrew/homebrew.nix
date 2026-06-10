@@ -56,7 +56,8 @@
 
     onActivation = {
       cleanup = "zap";
-      
+      autoUpdate = false;
+      upgrade = true; 
       extraFlags = [
         "--force-cleanup"
       ];
