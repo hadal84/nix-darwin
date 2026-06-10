@@ -2,9 +2,9 @@
 
 # i dont usually add comments to my code but pure bash like this makes me lose my shit
 
+# bash env
+PLUGIN_DIR="$CONFIG_DIR/plugins"
 source "$HOME/.config/sketchybar/colors.sh"
-
-# export omniwmctl
 export PATH="$HOME/.local/bin:/opt/homebrew/bin:/run/current-system/sw/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/OmniWM.app/Contents/MacOS:$PATH"
 
 # debug
@@ -14,21 +14,43 @@ echo "=== SKETCHYBAR BOOT: $(date) ==="
 which omniwmctl || echo "FATAL: omniwmctl not in PATH"
 which jq || echo "FATAL: jq not in PATH"
 
-PLUGIN_DIR="$CONFIG_DIR/plugins"
+# defaults
+sketchybar --bar position=top \
+	     height=90 \
+		 blur_radius=30 \
+		 color=0x00000000 \
+		 corner_radius=50 \
+		 y_offset=-23 \
+		 border_color=0x00000000 \
+		 border_width=3
 
-sketchybar --bar position=top height=35 blur_radius=30 color=$BAR corner_radius=50 margin=10 y_offset=5 border_color=$BORDER_COLOR border_width=3
+sketchybar --default animator_duration=250 \
+                     padding_left=0 \
+                     padding_right=0 \
+                     background.color=$BASE00 \
+                     background.border_color=$BASE0F \
+                     background.border_width=1 \
+                     background.corner_radius=8 \
+                     background.height=28 \
+                     icon.font="CaskaydiaMono Nerd Font Mono:Bold:17.0" \
+                     label.font="CaskaydiaMono Nerd Font Mono:Bold:14.0" \
+                     icon.color=$BASE07 \
+                     label.color=$BASE07 \
+                     label.padding_left=9 \
+                     label.padding_right=9
 
-default=(
-  padding_left=0
-  padding_right=0
-  icon.font="CaskaydiaMono Nerd Font Mono:Bold:17.0"
-  label.font="CaskaydiaMono Nerd Font Mono:Bold:14.0"
-  icon.color=$ACCENT_SYS
-  label.color=$TEXT
-  label.padding_left=4
-  label.padding_right=4
-)
-sketchybar --default "${default[@]}"
+# COMPONENT: Nix Logo
+sketchybar --add item apple.logo left \
+           --set apple.logo icon=" " \
+                            icon.font="CaskaydiaMono Nerd Font Mono:Bold:30.0" \
+                            icon.color=$BASE07 \
+                            icon.padding_left=-9 \
+                            icon.padding_right=6 \
+                            background.drawing=on \
+                            padding_right=8 \
+                            padding_left=0 \
+                            label.drawing=on \
+                            click_script="osascript $CONFIG_DIR/plugins/nixlogo.scpt"
 
 # COMPONENT: OmniWM Workspace Tray
 # 1. register the custom event bus
@@ -40,18 +62,26 @@ for i in {1..10}; do omniwmctl ping >/dev/null 2>&1 && break || sleep 0.5; done
 # 3. generate workspace items based on current state
 for sid in $(omniwmctl query workspaces | jq -r '.result.payload.workspaces[].number'); do
     sketchybar --add item space.$sid left \
-        --subscribe space.$sid omni_workspace_change \
+        --subscribe space.$sid omni_workspace_change mouse.clicked \
         --set space.$sid \
-	label.padding_left=8 \
-	label.padding_right=8 \
-        background.color=$ACCENT_SEC \
-        background.corner_radius=10 \
-        background.height=20 \
+	label.padding_left=11 \
+	label.padding_right=11 \
+        background.color=$BASE01 \
+        background.corner_radius=11 \
+        background.height=28 \
         background.drawing=off \
         label="$sid" \
-        click_script="omniwmctl command switch-workspace $sid" \
         script="$CONFIG_DIR/plugins/omniwm.sh $sid"
 done
+
+sketchybar --add bracket spaces '/space\..*/' \
+           --set spaces background.color=$BASE00 \
+                        background.corner_radius=10 \
+                        background.border_color=$BASE0F \
+                        background.border_width=1 \
+                        background.height=28 \
+                        padding_left=4 \
+                        padding_right=4 \
 
 # 4. manage the IPC consumer lifecycle
 pkill -f "omniwmctl watch active-workspace"
@@ -62,28 +92,54 @@ omniwmctl watch active-workspace --exec bash -c '
     sketchybar --trigger omni_workspace_change TARGET_WORKSPACE="$TARGET"
 ' &
 
-# COMPONENT: focused app indicator on the LEFT
-sketchybar --add item chevron left \
-           --set chevron icon="" \
-	         icon.padding_right=2 \
-	         icon.padding_left=2 \
-                 label.drawing=off \
-		 padding_right=5 \
-           --add item front_app left \
+# COMPONENT: focused app indicator
+sketchybar --add item front_app left \
            --set front_app icon.drawing=off \
-                 script="$PLUGIN_DIR/front_app.sh" \
-		 padding_left=0 \
+                           padding_right=8 \
+                           padding_left=8 \
+                           label.padding_left=13 \
+                           label.padding_right=13 \
+                           script="$PLUGIN_DIR/front_app.sh" \
            --subscribe front_app front_app_switched
 
-# COMPONENT: clock, volume, battery on the RIGHT
+# COMPONENT: spotify status
+media_cover=(
+  script="$PLUGIN_DIR/media.sh"
+  icon=
+  icon.color=$BASE07
+  icon.padding_left=8
+  icon.padding_right=-3
+  label.padding_left=8
+  label.padding_right=8
+  icon.font="CaskaydiaMono Nerd Font Mono:Bold:17.0" \
+  label.font="CaskaydiaMono Nerd Font Mono:Bold:14.0" \
+  label.max_chars=50
+  drawing=off
+  update_freq=3
+)
+
+sketchybar --add item media.cover right \
+           --set media.cover "${media_cover[@]}" \
+           --subscribe media.cover media_change
+
+# COMPONENT: date and time
 sketchybar --add item clock right \
-           --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
-           --add item volume right \
-           --set volume script="$PLUGIN_DIR/volume.sh" \
-           --subscribe volume volume_change \
-           --add item battery right \
-           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           --subscribe battery system_woke power_source_change
+           --set clock update_freq=10 \
+                       label.padding_left=8 \
+                       label.padding_right=8 \
+                       padding_right=8 \
+                       script="$PLUGIN_DIR/clock.sh"
+sketchybar --trigger date_time_update
+
+# COMPONENT: battery percentage
+sketchybar --add item battery right \
+            --subscribe battery system_woke power_source_change \
+            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+                          label.padding_right=8 \
+                          icon.padding_left=8 \
+                          padding_right=8 \
+                          padding_right=8 \
+                          click_script="osascript -e 'tell application \"System Events\" to tell process \"Control Center\" to perform action \"AXPress\" of menu bar item 2 of menu bar 1'" \
 
 # reload all scripts one last time
 sketchybar --update

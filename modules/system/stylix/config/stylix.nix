@@ -7,7 +7,7 @@
     enableReleaseChecks = false;
 
     image = ../wallpapers/jules.jpg;
-    base16Scheme = ../euphoria/amoled.yaml;
+    base16Scheme = ../base16/euphoria/amoled.yaml;
     polarity = "dark";
   };
 }

@@ -7,6 +7,11 @@
 (setq display-line-numbers-type 'nil)
 
 (set-frame-parameter (selected-frame) 'title-bar-color "#000000")
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+(setq frame-title-format nil)
+(modify-frame-parameters nil '((ns-transparent-titlebar . t)
+                               (ns-appearance . dark)))
 
 (setq custom-safe-themes t)
 (defvar my-stylix-theme-dir (expand-file-name ".config/doom-theme/" (getenv "HOME")))

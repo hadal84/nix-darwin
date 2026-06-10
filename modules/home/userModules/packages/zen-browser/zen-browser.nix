@@ -19,6 +19,7 @@ in
         "app.update.auto" = false;
         "app.update.enabled" = false;
         "zen.tabs.show-newtab-vertical" = false;
+        "browser.toolbars.bookmarks.visibility" = "always";
       };
 
       spaces = {

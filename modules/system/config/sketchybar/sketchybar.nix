@@ -15,22 +15,23 @@ in
        "sketchybar/colors.sh".text = '' 
          #!/usr/bin/env bash
 
-         export BAR="0xAA${colors.base00}"       
-         export SURFACE="0xff${colors.base01}"    
-         export BORDER="0xff${colors.base03}"     
+         export BASE00="0xAA${colors.base00}"       
+         export BASE01="0xff${colors.base01}"    
+         export BASE02="0xff${colors.base02}"    
+         export BASE03="0xff${colors.base03}"     
+         export BASE04="0xff${colors.base04}"   
+         export BASE05="0xff${colors.base05}"       
+         export BASE06="0xff${colors.base06}"       
+         export BASE07="0xff${colors.base07}" 
+         export BASE08="0xff${colors.base08}" 
+         export BASE09="0xff${colors.base09}" 
 
-         export TEXT_DIM="0xff${colors.base04}"   
-         export TEXT="0xff${colors.base05}"       
-         export TEXT_BRIGHT="0xff${colors.base07}" 
-
-         export ACCENT_SYS="0xff${colors.base0C}"
-         export ACCENT_PWR="0xff${colors.base0B}"
-         export ACCENT_ERR="0xff${colors.base08}"
-         export ACCENT_WRN="0xff${colors.base09}"
-
-         export ACCENT_PRM="0xff${colors.base0D}"
-         export ACCENT_SEC="0xff${colors.base0E}"
-
+         export BASE0A="0xff${colors.base0A}"
+         export BASE0B="0xff${colors.base0B}"
+         export BASE0C="0xff${colors.base0C}"
+         export BASE0D="0xff${colors.base0D}"
+         export BASE0E="0xff${colors.base0E}"
+         export BASE0F="0xff${colors.base0F}"
          '';
        };
    };
