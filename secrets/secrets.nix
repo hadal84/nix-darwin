@@ -11,4 +11,5 @@ in
   "rclone.age".publicKeys = users ++ systems;
   "hydroxide.age".publicKeys = users ++ systems;
   "ssh-config.age".publicKeys = users ++ systems;
+  "clash-verge.age".publicKeys = users ++ systems;
 }

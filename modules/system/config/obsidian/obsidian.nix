@@ -7,6 +7,12 @@
       cli.enable = true;
       package = null;
 
+      defaultSettings = {
+        app = {
+          showInlineTitle = false;
+        };
+      };
+
       vaults = {
         "obsidian" = {
           target = "zumrutKitaplik/obsidian";

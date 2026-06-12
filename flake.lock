@@ -259,6 +259,27 @@
         "type": "github"
       }
     },
+    "frc-nix": {
+      "inputs": {
+        "nix-github-actions": "nix-github-actions",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780163740,
+        "narHash": "sha256-lv9glKM9uzuwejxLxym4WHVbQUCxqeWzbv7DDTWNrDE=",
+        "owner": "frc4451",
+        "repo": "frc-nix",
+        "rev": "b8330150ee7b85e182d535fbd894b48122ba0e0d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "frc4451",
+        "repo": "frc-nix",
+        "type": "github"
+      }
+    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -478,6 +499,27 @@
         "type": "github"
       }
     },
+    "nix-github-actions": {
+      "inputs": {
+        "nixpkgs": [
+          "frc-nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1737420293,
+        "narHash": "sha256-F1G5ifvqTpJq7fdkT34e/Jy9VCyzd5XfJ9TO8fHhJWE=",
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
+        "rev": "f4158fa080ef4503c8f4c820967d946c2af31ec9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-github-actions",
+        "type": "github"
+      }
+    },
     "nix-homebrew": {
       "inputs": {
         "brew-src": [
@@ -653,6 +695,7 @@
         "agenix": "agenix",
         "brew-src": "brew-src",
         "flake-parts": "flake-parts",
+        "frc-nix": "frc-nix",
         "home-manager": "home-manager_2",
         "homebrew-barutsrb": "homebrew-barutsrb",
         "homebrew-bundle": "homebrew-bundle",
