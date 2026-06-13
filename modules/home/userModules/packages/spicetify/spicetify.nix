@@ -6,56 +6,23 @@ in
 {
   programs.spicetify = {
     enable = true;
-
-    /*
-    theme = {
-      name = "Blackout";
-      src = "${pkgs.fetchFromGitHub {
-        owner = "spicetify";
-        repo = "spicetify-themes";
-        rev = "master"; 
-        hash = "sha256-z8A7anB5l7SwHA5OEuM+Gi9uI0gwTd0/PXBZb7TL3tI=";
-      }}/Blackout";
-      injectCss = true;
-      replaceColors = true;
-      overwriteAssets = true;
-    };
-    */
-
-
+    
     enabledExtensions = with spicePkgs.extensions; [
-    /*
-     ({
-        name = "spicy-lyrics.mjs";
-        src = "${pkgs.fetchFromGitHub {
-          owner = "Spikerko";
-          repo = "spicy-lyrics";
-          rev = "v1.0.0"; 
-          hash = "sha256-Bq+he9pdFWfzSGn050IpYWrf5pRtmd1cfPPqzbCoqa0="; 
-        }}/builds";
-      })
-    */
       spicyLyrics
       ({
         name = "noControls.js";
-        src = "${pkgs.fetchFromGitHub {
-          owner = "ohitstom";
-          repo = "spicetify-extensions";
-          rev = "main";
-          hash = "sha256-jjx35PBp47JGc7WS/h2M7r1Mv7cNmWM0zBGVDYSgFvs=";
-        }}/noControls";
+        src = "${inputs.ohitstom-spicetify-extensions}/noControls";
       })
     ];
 
    enabledCustomApps = [
       ({
         name = "better-local-files";
-        src = pkgs.fetchFromGitHub {
-          owner = "Pithaya";
-          repo = "spicetify-apps-dist";
-          rev = "dist/better-local-files";
-          hash = "sha256-S+rp4naiV87v62wQPX9albyofWvKKbIPx8rrLAk2ffI="; 
-        };
+        src = inputs.pithaya-spicetify-better-local-files; 
+      })
+      ({
+        name = "eternal-jukebox";
+        src = inputs.pithaya-spicetify-eternal-jukebox;
       })
     ]; 
 

@@ -39,6 +39,7 @@
    obsidian
    sioyek
    cinny-desktop
+   zoom-us
 
    inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
    (import ../_derivations/nicotine.nix { inherit stdenvNoCC; })

@@ -20,6 +20,8 @@ in
         "app.update.enabled" = false;
         "zen.tabs.show-newtab-vertical" = false;
         "browser.toolbars.bookmarks.visibility" = "always";
+	"browser.download.dir"= "/Users/hadal84/Desktop";
+	"browser.download.useDownloadDir"= false;
       };
 
       spaces = {

@@ -63,6 +63,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ohitstom-spicetify-extensions = {
+      url = "github:ohitstom/spicetify-extensions/main";
+      flake = false;
+    };
+
+    pithaya-spicetify-better-local-files = {
+      url = "github:Pithaya/spicetify-apps-dist?ref=dist/better-local-files";
+      flake = false;
+    };
+
+    pithaya-spicetify-eternal-jukebox = {
+      url = "github:Pithaya/spicetify-apps-dist?ref=dist/eternal-jukebox";
+      flake = false;
+    }; 
+
   };
 
   outputs = inputs@{ flake-parts, ... }:
