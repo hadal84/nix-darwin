@@ -7,3 +7,4 @@
 (load! "config/platformio.el")
 (load! "config/typst.el")
 (load! "config/mpremote.el")
+(load! "config/nixfmt.el")

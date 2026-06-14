@@ -25,6 +25,7 @@
    ktlint
    ripgrep
    fastfetch
+   nixfmt-rs
    hydroxide
    shellcheck
    sketchybar

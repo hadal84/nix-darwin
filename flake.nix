@@ -35,7 +35,7 @@
 
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
-      inputs.brew-src.follows = "brew-src"; 
+      inputs.brew-src.follows = "brew-src";
     };
 
     homebrew-barutsrb = {
@@ -76,18 +76,19 @@
     pithaya-spicetify-eternal-jukebox = {
       url = "github:Pithaya/spicetify-apps-dist?ref=dist/eternal-jukebox";
       flake = false;
-    }; 
+    };
 
   };
 
-  outputs = inputs@{ flake-parts, ... }:
+  outputs =
+    inputs@{ flake-parts, ... }:
 
-  flake-parts.lib.mkFlake { inherit inputs; } {
-     systems = [ "aarch64-darwin" ];
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "aarch64-darwin" ];
 
-     imports = [
-       (inputs.import-tree ./flake/xnu)
-     ];
-  };
+      imports = [
+        (inputs.import-tree ./flake/xnu)
+      ];
+    };
 
 }
