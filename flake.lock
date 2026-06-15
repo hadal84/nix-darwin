@@ -764,6 +764,7 @@
         "pithaya-spicetify-eternal-jukebox": "pithaya-spicetify-eternal-jukebox",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
+        "suite3270-src": "suite3270-src",
         "vscode-extensions": "vscode-extensions",
         "zen-browser": "zen-browser"
       }
@@ -818,6 +819,19 @@
         "owner": "nix-community",
         "repo": "stylix",
         "type": "github"
+      }
+    },
+    "suite3270-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734308328,
+        "narHash": "sha256-63bRpR1PrGM2WiCT+EEtfewbQox29Bx/5PT7mmg4ZQo=",
+        "type": "tarball",
+        "url": "https://sourceforge.net/projects/x3270/files/x3270/4.3ga10/suite3270-4.3ga10-src.tgz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://sourceforge.net/projects/x3270/files/x3270/4.3ga10/suite3270-4.3ga10-src.tgz"
       }
     },
     "systems": {

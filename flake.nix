@@ -83,6 +83,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    suite3270-src = {
+      url = "https://sourceforge.net/projects/x3270/files/x3270/4.3ga10/suite3270-4.3ga10-src.tgz";
+      flake = false; # Tell Nix this is raw data, not a Nix Flake
+    };
+
   };
 
   outputs =

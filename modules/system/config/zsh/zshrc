@@ -30,6 +30,10 @@ alias cleanup="sudo nix-collect-garbage -d"
 # phenoxide
 alias phenoxide="ssh phenoxide"
 
+# ibm tk5
+alias runtk5="cd ~/zumrutKitaplik/code/binary/iso/mvs-tk5 && hercules -f conf/tk5.cnf"
+alias tk5="c3270 127.0.0.1:3270"
+
 # pure
 autoload -U promptinit; promptinit
 prompt pure
