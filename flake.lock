@@ -764,6 +764,7 @@
         "pithaya-spicetify-eternal-jukebox": "pithaya-spicetify-eternal-jukebox",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
+        "vscode-extensions": "vscode-extensions",
         "zen-browser": "zen-browser"
       }
     },
@@ -940,6 +941,26 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "vscode-extensions": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1781412234,
+        "narHash": "sha256-1/LLvu1Kn3v3MVxwUO1ubLRn70teMTEIc6n6+s2tMdk=",
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
+        "rev": "127028c41f0864f6d93ca90e5459e590b056f47d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-vscode-extensions",
         "type": "github"
       }
     },
