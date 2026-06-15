@@ -12,4 +12,5 @@ in
   "hydroxide.age".publicKeys = users ++ systems;
   "ssh-config.age".publicKeys = users ++ systems;
   "clash-verge.age".publicKeys = users ++ systems;
+  "zowe.age".publicKeys = users ++ systems;
 }

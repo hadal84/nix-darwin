@@ -36,6 +36,9 @@
           ];
         };
       };
-      stylix.targets.vscodium.enable = true;
+      stylix.targets.vscodium = {
+        enable=true;
+        colors.enable = true;
+      };
     };
 }

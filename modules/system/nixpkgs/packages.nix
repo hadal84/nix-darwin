@@ -29,6 +29,7 @@
     rustup
     zoxide
     ktlint
+    nodejs
     ripgrep
     fastfetch
     nixfmt-rs
