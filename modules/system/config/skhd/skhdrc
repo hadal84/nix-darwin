@@ -3,10 +3,10 @@ cmd + shift - f : osascript -e 'tell application "Finder" to set target of (make
 cmd + shift - e: emacsclient -c -n
 
 # capture whole screen and save to default location
-rcmd + shift - 3 : /usr/sbin/screencapture -m "~/Desktop/presentDay.png"
+rcmd + shift - 3 : /bin/bash -c 'counter=1; while [[ -f "$HOME/Desktop/presentDay ${counter}.png" ]]; do ((counter++)); done; /usr/sbin/screencapture -m "$HOME/Desktop/presentDay ${counter}.png"'
 
 # interactive selection mode
-rcmd + shift - 4 : /usr/sbin/screencapture -i "~/Desktop/presentTime.png"
+rcmd + shift - 4 : /bin/bash -c 'counter=1; while [[ -f "$HOME/Desktop/presentTime ${counter}.png" ]]; do ((counter++)); done; /usr/sbin/screencapture -i "$HOME/Desktop/presentTime ${counter}.png"'
 
 # launch the native screen cecording
 rcmd + shift - 5 : /usr/bin/open -a /System/Applications/Utilities/Screenshot.app
