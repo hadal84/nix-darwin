@@ -42,6 +42,7 @@
     rust-analyzer
     coreutils-prefixed
     python314Packages.pytest
+    lixPackageSets.git.nixpkgs-review
 
     ghostty-bin
     vesktop

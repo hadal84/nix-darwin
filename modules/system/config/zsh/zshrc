@@ -30,6 +30,24 @@ alias cleanup="sudo nix-collect-garbage -d"
 # phenoxide
 alias phenoxide="ssh phenoxide"
 
+# z/os
+function z() {
+    case "$1" in
+        up)
+            echo "Starting Hercules mainframe..."
+            cd /Users/hadal84/zumrutKitaplik/code/binary/iso/z:os3.1/zos31_version1 && hercules -f MF_31.cnf
+            ;;
+        connect)
+            echo "Connecting c3270 terminal to localhost:992..."
+            c3270 L:localhost:992
+            ;;
+        *)
+            echo "Usage: z [up|connect]"
+            return 1
+            ;;
+    esac
+}
+
 # pure
 autoload -U promptinit; promptinit
 prompt pure
