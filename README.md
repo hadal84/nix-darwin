@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/hadal84/nix-darwin/refs/heads/main/modules/home/userModules/packages/doom-emacs/doom.d/img/nixglass.png" width="200px" alt="logo" />](https://github.com/hadal84/nix-darwin)
+[<img src="https://raw.githubusercontent.com/hadal84/nix-darwin/refs/heads/main/modules/home/userModules/packages/doom-emacs/doom.d/img/nixglass.png" width="600px" alt="logo" />](https://github.com/hadal84/nix-darwin)
 
 # nix-euphoria
 
