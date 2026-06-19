@@ -14,12 +14,12 @@
     nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
 
     homebrew-core = {
-      url = "github:homebrew/homebrew-core/90518a33394b6a72a0cb544a8ab90be523011b19";
+      url = "github:homebrew/homebrew-core";
       flake = false;
     };
 
     homebrew-cask = {
-      url = "github:homebrew/homebrew-cask/90518a33394b6a72a0cb544a8ab90be523011b19";
+      url = "github:homebrew/homebrew-cask";
       flake = false;
     };
 
@@ -29,7 +29,7 @@
     };
 
     brew-src = {
-      url = "github:homebrew/brew/90518a33394b6a72a0cb544a8ab90be523011b19";
+      url = "github:homebrew/brew";
       flake = false;
     };
 

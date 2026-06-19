@@ -11,7 +11,21 @@
       "homebrew/homebrew-cask" = inputs.homebrew-cask;
       "barutsrb/homebrew-tap" = inputs.homebrew-barutsrb;
     };
-    mutableTaps = false; 
+    trust = {
+      formulae = [
+
+      ];
+      casks = [
+        "barutsrb/homebrew-tap/omniwm"
+      ];
+      commands = [
+
+      ];
+      taps = [
+
+      ];
+    };
+    mutableTaps = false;
   };
 
   homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
