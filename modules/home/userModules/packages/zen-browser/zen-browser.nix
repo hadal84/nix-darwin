@@ -22,6 +22,7 @@ in
         "browser.toolbars.bookmarks.visibility" = "always";
 	"browser.download.dir"= "/Users/hadal84/Desktop";
 	"browser.download.useDownloadDir"= false;
+	"network.http.http3.enable"=false;
       };
 
       spaces = {
