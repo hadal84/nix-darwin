@@ -1,12 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
+
 let
-  byedpi = import ../../../../system/_derivations/byedpi.nix { inherit pkgs; };
+  byedpi-master = inputs.nixpkgs-master.legacyPackages.${pkgs.stdenv.hostPlatform.system}.byedpi;
 in
 {
   launchd.user.agents.byedpi = {
     serviceConfig = {
       ProgramArguments = [ 
-        "${byedpi}/bin/ciadpi" 
+        "${byedpi-master}/bin/ciadpi" 
         "-i" "127.0.0.1" 
         "-p" "1080" 
         "-r" "1+s"

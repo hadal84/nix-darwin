@@ -54,7 +54,6 @@
 
     inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
     (import ../_derivations/nicotine.nix { inherit stdenvNoCC; })
-    (import ../_derivations/byedpi.nix { inherit pkgs; })
     (pkgs.callPackage ../_derivations/z-library.nix { })
     (pkgs.callPackage ../_derivations/c3270.nix { suite3270-src = inputs.suite3270-src; })
   ];

@@ -41,7 +41,6 @@
       "obs"
       "raspberry-pi-imager"
       "stremio"
-      "tor-browser"
       "ungoogled-chromium"
       "vlc"
       "robloxstudio"
