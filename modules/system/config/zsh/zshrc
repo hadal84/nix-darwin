@@ -22,9 +22,12 @@ alias x=exit
 alias history="history | grep -v history | grep"
 alias nixlavat="lavat -g -c bd8bfa -k 52a3ff -b 8 -r 10 -R 3 -G"
 
+# services that safely need to be restarted upon rebuild
+services=("emacs")
+
 # nix
-alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec zsh"
-alias update="sudo nix flake update && rebuild"
+alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec zsh && killall ${services[@]}"
+alias update="sudo -H nix flake update && rebuild"
 alias cleanup="sudo nix-collect-garbage -d"
 
 # phenoxide
