@@ -37,6 +37,7 @@
     hydroxide
     shellcheck
     sketchybar
+    hydra-check
     darwin.trash
     multimarkdown
     rust-analyzer
