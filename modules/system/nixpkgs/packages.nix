@@ -51,7 +51,6 @@
     hunspellDicts.en_US
     python314Packages.pytest
     lixPackageSets.git.nixpkgs-review
-    tree-sitter-grammars.tree-sitter-typst
 
     ghostty-bin
     vesktop

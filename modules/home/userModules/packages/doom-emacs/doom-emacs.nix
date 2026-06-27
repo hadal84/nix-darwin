@@ -11,7 +11,10 @@ in
     enable = true;
     emacs = stablePkgs.emacs;
     doomDir = ./doom.d;
-    extraPackages = epkgs: [ epkgs.base16-theme ];
+    extraPackages = epkgs: [
+      epkgs.base16-theme
+      epkgs.treesit-grammars.with-all-grammars
+    ];
   };
 
   services.emacs = {
