@@ -56,9 +56,6 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
-       ;;eshell            ; the elisp shell that works everywhere
-       ;;shell             ; simple shell REPL for Emacs
-       ;;term              ; basic terminal emulator for Emacs
        vterm             ; the best terminal emulation in Emacs
 
        :checkers
@@ -90,12 +87,13 @@
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
-       (:if (featurep :system 'macos) macos)  ; improve compatibility with macOS
+       macos  ; improve compatibility with macOS
        tty               ; improve the terminal Emacs experience
 
        :lang
        emacs-lisp
        nix
+       cc
        (org             ; organize your plain life in plain text
         +pretty)         ; tasing is believing
        kotlin

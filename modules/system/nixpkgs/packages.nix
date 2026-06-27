@@ -15,11 +15,14 @@
     lsd
     fzf
     bat
+    ruff
     skhd
     tree
     btop
+    qpdf
     lavat
     cmake
+    typst
     delta
     isort
     rsync
@@ -31,6 +34,8 @@
     ktlint
     nodejs
     ripgrep
+    pyright
+    hunspell
     hercules
     fastfetch
     nixfmt-rs
@@ -42,8 +47,11 @@
     multimarkdown
     rust-analyzer
     coreutils-prefixed
+    hunspellDicts.tr_TR
+    hunspellDicts.en_US
     python314Packages.pytest
     lixPackageSets.git.nixpkgs-review
+    tree-sitter-grammars.tree-sitter-typst
 
     ghostty-bin
     vesktop

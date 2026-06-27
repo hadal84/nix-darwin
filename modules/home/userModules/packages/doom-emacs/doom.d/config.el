@@ -8,3 +8,4 @@
 (load! "config/typst.el")
 (load! "config/mpremote.el")
 (load! "config/nixfmt.el")
+(load! "config/hunspell.el")

@@ -18,7 +18,7 @@ in
     enable = true;
   };
 
-  home.file.".config/doom-theme/base16-stylix-theme.el".text = with config.lib.stylix.colors.withHashtag; ''
+  home.file.".config/doom/base16-stylix-theme.el".text = with config.lib.stylix.colors.withHashtag; ''
     (deftheme base16-stylix "Stylix auto-generated theme.")
     (require 'base16-theme)
     (base16-theme-define 'base16-stylix
@@ -29,8 +29,16 @@ in
     (provide 'base16-stylix-theme)
   '';
 
+  home.file.".config/doom/nix-paths.el".text = ''
+  (setenv "DICPATH" "${pkgs.hunspellDicts.en-us}/share/hunspell:${pkgs.hunspellDicts.tr-tr}/share/hunspell") 
+  
+  (after! ispell
+    (setq ispell-program-name "${pkgs.hunspell}/bin/hunspell"
+          ispell-dictionary "en_US"))
+  '';
+
   xdg.configFile = {
-    "doom-theme/img".source =
+    "doom/img".source =
       config.lib.file.mkOutOfStoreSymlink "${selfPath}/modules/home/userModules/packages/doom-emacs/doom.d/img";
   };
 }
