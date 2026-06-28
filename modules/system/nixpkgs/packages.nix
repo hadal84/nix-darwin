@@ -61,6 +61,7 @@
     zoom-us
 
     inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
     (import ../_derivations/nicotine.nix { inherit stdenvNoCC; })
     (pkgs.callPackage ../_derivations/z-library.nix { })
     (pkgs.callPackage ../_derivations/c3270.nix { suite3270-src = inputs.suite3270-src; })

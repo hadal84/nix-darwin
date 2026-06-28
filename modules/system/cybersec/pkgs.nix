@@ -6,12 +6,6 @@
   ...
 }:
 
-let
-
-  master-branch = inputs.nixpkgs-master.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-
-in
-
 {
   homebrew = {
     casks = [
@@ -32,6 +26,8 @@ in
     metasploit
     wireshark
     john
+    sherlock
+    holehe
     hashcat
     ghidra
     nmap
@@ -39,6 +35,6 @@ in
     openvpn
     radare2
     gdb
-    master-branch.byedpi
+    byedpi
   ];
 }

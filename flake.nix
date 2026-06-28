@@ -11,6 +11,7 @@
     agenix.url = "github:ryantm/agenix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
+    herdr.url="github:ogulcancelik/herdr";
 
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";

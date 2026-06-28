@@ -49,7 +49,6 @@
 
     brews = [
       "pure"
-      "zellij"
       "nicotine-plus"
     ];
 

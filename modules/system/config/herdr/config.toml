@@ -1,0 +1,75 @@
+onboarding = false
+[theme]
+name = "terminal"
+
+[terminal]
+new_cwd = "follow"
+
+[update]
+version_check = false
+manifest_check = false
+
+[keys]
+prefix = "cmd+b"
+help = "prefix+?"
+settings = "prefix+s"
+detach = "prefix+q"
+reload_config = "prefix+shift+r"
+open_notification_target = "prefix+o"
+workspace_picker = "prefix+w"
+goto = "prefix+g"
+new_workspace = "prefix+shift+n"
+new_worktree = "prefix+shift+g"
+rename_workspace = "prefix+shift+w"
+close_workspace = "prefix+shift+d"
+remote_image_paste = "ctrl+v"
+new_tab = "prefix+c"
+rename_tab = "prefix+shift+t"
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+switch_tab = "prefix+1..9"
+switch_workspace = "prefix+shift+1..9"
+close_tab = "prefix+shift+x"
+rename_pane = "prefix+shift+p"
+edit_scrollback = "prefix+e"
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+cycle_pane_next = "prefix+tab"
+cycle_pane_previous = "prefix+shift+tab"
+split_vertical = "prefix+v"
+split_horizontal = "prefix+shift+v"
+close_pane = "prefix+x"
+zoom = "prefix+z"
+resize_mode = "prefix+r"
+toggle_sidebar = "prefix+b"
+
+navigate_workspace_up = "up"
+navigate_workspace_down = "down"
+navigate_pane_left = "h"
+navigate_pane_down = "j"
+navigate_pane_up = "k"
+navigate_pane_right = "l"
+
+[ui]
+mouse_capture = true
+mouse_scroll_lines = 3
+confirm_close = true
+prompt_new_tab_name = false
+pane_borders = true
+pane_gaps = true
+
+[ui.toast.herdr]
+position = "bottom-right"
+
+[ui.toast.clipboard]
+enabled = false
+
+[remote]
+manage_ssh_config = false
+
+[experimental]
+allow_nested = false
+kitty_graphics = true
+pane_history = false
