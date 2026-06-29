@@ -1,4 +1,5 @@
-; customization
+;;; modules/doom/packages.el -*- lexical-binding: t; no-byte-compile: t; -*-
+
 (package! solaire-mode :disable t) ; fixing themes
 (package! autothemer)
 
