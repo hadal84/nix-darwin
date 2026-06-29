@@ -53,7 +53,6 @@
     lixPackageSets.git.nixpkgs-review
 
     ghostty-bin
-    vesktop
     obsidian
     vscodium
     sioyek

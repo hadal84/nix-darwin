@@ -9,7 +9,7 @@
     "/Applications/Nix Apps/Obsidian.app"
     "/Users/hadal84/Applications/Home Manager Apps/Spotify.app"
     "/Applications/Thunderbird.app"
-    "/Applications/Nix Apps/Vesktop.app"
+    "/Applications/Vesktop.app"
     "/Applications/Affinity.app"
     "/Applications/DaVinci Resolve.app" 
     "/Applications/UTM.app"

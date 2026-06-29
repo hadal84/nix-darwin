@@ -45,6 +45,7 @@
       "vlc"
       "robloxstudio"
       "roblox"
+      "vesktop"
     ];
 
     brews = [

@@ -38,6 +38,7 @@ in
         ../flake-modules/base.nix
         ../flake-modules/home-manager.nix
         ../flake-modules/nix-homebrew.nix
+        ../flake-modules/overlays.nix
       ];
     };
   };

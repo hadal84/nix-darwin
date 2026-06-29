@@ -10,7 +10,6 @@
     nur.url = "github:nix-community/NUR";
     agenix.url = "github:ryantm/agenix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
     herdr.url="github:ogulcancelik/herdr";
 
     nix-darwin = {
@@ -90,7 +89,12 @@
 
     suite3270-src = {
       url = "https://sourceforge.net/projects/x3270/files/x3270/4.3ga10/suite3270-4.3ga10-src.tgz";
-      flake = false; # Tell Nix this is raw data, not a Nix Flake
+      flake = false;
+    };
+
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
