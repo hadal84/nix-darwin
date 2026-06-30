@@ -776,6 +776,22 @@
         "type": "github"
       }
     },
+    "prism-oreui": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1779697614,
+        "narHash": "sha256-wkbqrPrDZjVZ0S/3125YPajqoyGccISZ6l5tVk0+Rvs=",
+        "owner": "ninsent",
+        "repo": "Ore-UI-theme-pack",
+        "rev": "373c4557601581eab7561eaaba7164d9e8be4eaa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ninsent",
+        "repo": "Ore-UI-theme-pack",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "agenix": "agenix",
@@ -799,6 +815,7 @@
         "ohitstom-spicetify-extensions": "ohitstom-spicetify-extensions",
         "pithaya-spicetify-better-local-files": "pithaya-spicetify-better-local-files",
         "pithaya-spicetify-eternal-jukebox": "pithaya-spicetify-eternal-jukebox",
+        "prism-oreui": "prism-oreui",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "suite3270-src": "suite3270-src",

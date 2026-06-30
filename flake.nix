@@ -97,6 +97,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    prism-oreui = {
+      url = "github:ninsent/Ore-UI-theme-pack";
+      flake = false;
+    };
+
   };
 
   outputs =
