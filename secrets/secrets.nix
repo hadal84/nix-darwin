@@ -9,7 +9,6 @@ in
   "github-ssh-key.age".publicKeys = users ++ systems;
   "phenoxide-ssh-key.age".publicKeys = users ++ systems;
   "rclone.age".publicKeys = users ++ systems;
-  "hydroxide.age".publicKeys = users ++ systems;
   "ssh-config.age".publicKeys = users ++ systems;
   "clash-verge.age".publicKeys = users ++ systems;
   "zowe.age".publicKeys = users ++ systems;

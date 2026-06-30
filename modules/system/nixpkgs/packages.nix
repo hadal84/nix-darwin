@@ -37,15 +37,16 @@
     pyright
     hunspell
     hercules
+    nix-tree
     fastfetch
     nixfmt-rs
-    hydroxide
     shellcheck
     sketchybar
     hydra-check
     darwin.trash
     multimarkdown
     rust-analyzer
+    protonmail-bridge
     coreutils-prefixed
     hunspellDicts.tr_TR
     hunspellDicts.en_US
