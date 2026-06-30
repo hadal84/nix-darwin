@@ -35,10 +35,7 @@ in
         (inputs.import-tree ../../modules/system)
         (inputs.import-tree ../../modules/hosts)
         
-        ../flake-modules/base.nix
-        ../flake-modules/home-manager.nix
-        ../flake-modules/nix-homebrew.nix
-        ../flake-modules/overlays.nix
+        (inputs.import-tree ../flake-modules)
       ];
     };
   };

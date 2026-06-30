@@ -71,7 +71,6 @@ centerFocusedColumn = "never"
 columnWidthPresets = [0.3333333333333333, 0.5, 0.66]
 infiniteLoop = false
 maxVisibleColumns = 2
-maxWindowsPerColumn = 3
 singleWindowAspectRatio = "4:3"
 
 [quakeTerminal]
@@ -82,11 +81,7 @@ heightPercent = 100.0
 monitorMode = "focusedWindow"
 opacity = 1.0
 position = "center"
-useCustomFrame = false
 widthPercent = 100.0
-
-[state]
-commandPaletteLastMode = "windows"
 
 [statusBar]
 showAppNames = false
@@ -590,6 +585,14 @@ id = "toggleFocusedWindowFloating"
 [[hotkeys]]
 binding = "Shift+Command+Up Arrow"
 id = "raiseAllFloatingWindows"
+
+[[hotkeys]]
+binding = "Option+Shift+Minus"
+id = "setColumnWidth.decrease10Percent"
+
+[[hotkeys]]
+binding = "Option+Shift+Equal"
+id = "setColumnWidth.increase10Percent"
 
 [[workspaces]]
 id = "03DB2CF1-BCDA-4314-B0F5-2FF863CF7653"
