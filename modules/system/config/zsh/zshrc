@@ -30,9 +30,6 @@ alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec z
 alias update="sudo -H nix flake update && rebuild"
 alias cleanup="sudo nix-collect-garbage -d"
 
-# phenoxide
-alias phenoxide="ssh phenoxide"
-
 # z/os
 function z() {
     case "$1" in
