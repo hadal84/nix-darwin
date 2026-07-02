@@ -26,6 +26,7 @@
     delta
     isort
     rsync
+    gdown
     rclone
     nodejs
     pipenv

@@ -46,6 +46,7 @@
       "robloxstudio"
       "roblox"
       "vesktop"
+      "appcleaner"
     ];
 
     brews = [
