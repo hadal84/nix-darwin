@@ -32,6 +32,7 @@
     pipenv
     rustup
     zoxide
+    gradle
     ktlint
     nodejs
     ripgrep
