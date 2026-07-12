@@ -16,13 +16,13 @@
 
       ];
       casks = [
-        "barutsrb/homebrew-tap/omniwm"
+        "barutsrb/tap/omniwm"
       ];
       commands = [
 
       ];
       taps = [
-
+        "barutsrb/tap"
       ];
     };
     mutableTaps = false;

@@ -2,7 +2,7 @@
   description = "cyberia-mono";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/534ee3d8beb1737b5342995f8837e2b2705ce0d8";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -13,7 +13,7 @@
     herdr.url="github:ogulcancelik/herdr";
 
     nix-darwin = {
-      url = "github:nix-darwin/nix-darwin/master";
+      url = "github:nix-darwin/nix-darwin/a1fa429e945becaf60468600daf649be4ba0350c";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
