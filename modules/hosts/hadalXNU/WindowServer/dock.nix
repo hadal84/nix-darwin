@@ -26,5 +26,6 @@
     "/Applications/KiCad/KiCad.app"
     "/Applications/FreeCAD.app"
     "/Applications/Clash Verge.app"
+    "/Applications/WhatsApp.app"
   ];
 }
