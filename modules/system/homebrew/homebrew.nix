@@ -54,15 +54,15 @@
       "nicotine-plus"
     ];
 
-    masApps = {
-      "DaVinci Resolve" = 571213070;
-      "Goodnotes" = 1444383602;
-    };
+    # masApps = {
+    #  "DaVinci Resolve" = 571213070;
+    #  "Goodnotes" = 1444383602;
+    # }; # mas is broken as hell right now.
 
     onActivation = {
       cleanup = "zap";
       autoUpdate = false;
-      upgrade = true;
+      upgrade = false; # change to true when issue is resolved
       extraFlags = [
         "--force-cleanup"
       ];

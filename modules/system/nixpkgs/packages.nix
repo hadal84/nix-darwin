@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     jq
     fd
+    uv
     vim
     git
     lsd
@@ -34,7 +35,6 @@
     zoxide
     gradle
     ktlint
-    nodejs
     ripgrep
     pyright
     hunspell

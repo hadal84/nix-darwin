@@ -20,7 +20,7 @@ in
   flake = {
     darwinConfigurations."xnu" = inputs.nix-darwin.lib.darwinSystem {
       specialArgs = {
-        inherit inputs;
+        inherit inputs pkgs-stable;
         selfPath = "/Users/hadal84/nix-darwin";
       };
       
