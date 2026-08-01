@@ -850,7 +850,7 @@
         "prism-oreui": "prism-oreui",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
-        "suite3270-src": "suite3270-src",
+        "suite3270": "suite3270",
         "vscode-extensions": "vscode-extensions",
         "zen-browser": "zen-browser"
       }
@@ -928,7 +928,7 @@
         "type": "github"
       }
     },
-    "suite3270-src": {
+    "suite3270": {
       "flake": false,
       "locked": {
         "lastModified": 1734308328,

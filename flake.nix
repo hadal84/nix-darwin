@@ -87,7 +87,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    suite3270-src = {
+    suite3270 = {
       url = "https://sourceforge.net/projects/x3270/files/x3270/4.3ga10/suite3270-4.3ga10-src.tgz";
       flake = false;
     };

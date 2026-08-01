@@ -5,14 +5,14 @@
   openssl,
   readline,
   m4,
-  suite3270-src,
+  src,
 }:
 
 stdenv.mkDerivation rec {
   pname = "c3270";
   version = "4.3ga10";
 
-  src = suite3270-src;
+  inherit src;
 
   nativeBuildInputs = [ m4 ];
   buildInputs = [
