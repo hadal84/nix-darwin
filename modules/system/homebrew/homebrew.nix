@@ -47,6 +47,8 @@
       "roblox"
       "vesktop"
       "appcleaner"
+      "electrum-ltc"
+      "monero-wallet"
     ];
 
     brews = [

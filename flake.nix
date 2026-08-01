@@ -102,6 +102,11 @@
       flake = false;
     };
 
+    haveno-reto = {
+      url = "https://github.com/retoaccess1/haveno-reto/releases/latest/download/haveno-v1.8.0-macos-aarch64-installer.dmg";
+      flake = false;
+    };
+
   };
 
   outputs =
