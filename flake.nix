@@ -107,6 +107,11 @@
       flake = false;
     };
 
+    bisq2 = {
+      url = "https://github.com/bisq-network/bisq2/releases/latest/download/Bisq-aarch64-2.1.11.dmg";
+      flake = false;
+    };
+
   };
 
   outputs =

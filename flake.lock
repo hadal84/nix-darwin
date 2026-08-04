@@ -89,6 +89,18 @@
         "type": "github"
       }
     },
+    "bisq2": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-UvUAvF/ILNngKBcHRtlcVCBZWZJRDCj+Iqd5JzRu0Ls=",
+        "type": "file",
+        "url": "https://github.com/bisq-network/bisq2/releases/latest/download/Bisq-aarch64-2.1.11.dmg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/bisq-network/bisq2/releases/latest/download/Bisq-aarch64-2.1.11.dmg"
+      }
+    },
     "brew-src": {
       "flake": false,
       "locked": {
@@ -826,6 +838,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "bisq2": "bisq2",
         "brew-src": "brew-src",
         "flake-parts": "flake-parts",
         "frc-nix": "frc-nix",

@@ -48,6 +48,7 @@
       "vesktop"
       "appcleaner"
       "electrum-ltc"
+      "electrum"
       "monero-wallet"
     ];
 

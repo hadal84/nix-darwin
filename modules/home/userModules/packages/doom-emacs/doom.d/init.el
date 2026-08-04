@@ -98,8 +98,6 @@
        cc
        (org             ; organize your plain life in plain text
         +pretty)         ; tasing is believing
-       kotlin
-       (rust +lsp)
        (python +lsp)           ; beautiful is better than ugly
 
        markdown          ; writing docs for people to ignore
