@@ -54,6 +54,7 @@
 
     brews = [
       "pure"
+      "hydra"
       "nicotine-plus"
     ];
 
