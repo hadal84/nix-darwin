@@ -4,7 +4,7 @@
 (setq doom-font (font-spec :family "CaskaydiaMono Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "CaskaydiaMono Nerd Font Mono" :size 18))
 
-(setq display-line-numbers-type 'nil)
+; (setq display-line-numbers-type 'nil)
 
 (set-frame-parameter (selected-frame) 'title-bar-color "#000000")
 (setq frame-title-format nil)
