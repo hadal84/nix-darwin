@@ -18,9 +18,10 @@ alias ls="lsd"
 alias rm="trash"
 alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
 alias reloadbar="sketchybar --reload"
-alias ":q"=exit
+alias ":q"=exit # yeah yeah i know this is miserable
 alias show-history="history | grep -v history | grep"
 alias nixlavat="lavat -g -c bd8bfa -k 52a3ff -b 8 -r 10 -R 3 -G"
+alias ip-info='curl ipinfo.io'
 
 # services that safely need to be restarted upon rebuild
 services=("emacs")
