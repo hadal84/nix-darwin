@@ -15,6 +15,7 @@
     ];
 
     brews = [
+      "hydra"
     ];
 
     masApps = {
@@ -31,6 +32,7 @@
     hashcat
     ghidra
     nmap
+    tor
     sqlmap
     openvpn
     radare2
