@@ -6,6 +6,7 @@
 # paths
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export EDITOR="emacsclient -c -a ''"
+export CLANG_CONFIG_FILE_USER_DIR="$HOME/.config/clang"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # aliases
