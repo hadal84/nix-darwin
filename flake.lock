@@ -515,6 +515,21 @@
         "type": "github"
       }
     },
+    "multiverse": {
+      "locked": {
+        "lastModified": 1786394090,
+        "narHash": "sha256-+jF1hYf1fLWb0o82OGkSy0Ab3f+Qav9oprbJPDyngmY=",
+        "owner": "fzakaria",
+        "repo": "nixpkgs-multiverse",
+        "rev": "f8ec017e5956c67f9d53d4e3acc6a6b9e6038379",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fzakaria",
+        "repo": "nixpkgs-multiverse",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -850,6 +865,7 @@
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "import-tree": "import-tree",
+        "multiverse": "multiverse",
         "nix-darwin": "nix-darwin",
         "nix-doom-emacs-unstraightened": "nix-doom-emacs-unstraightened",
         "nix-homebrew": "nix-homebrew",
