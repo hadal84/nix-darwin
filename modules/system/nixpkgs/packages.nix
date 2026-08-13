@@ -36,6 +36,7 @@
     gradle
     ktlint
     ripgrep
+    cmatrix
     pyright
     hunspell
     hercules
