@@ -69,7 +69,7 @@
        ;;ansible
        ;;biblio            ; Writes a PhD for you (citation needed)
        ;;collab            ; buffers with friends
-       ;;debugger          ; FIXME stepping through code, to help you add bugs
+       debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
        editorconfig      ; let someone else argue about tabs vs spaces
@@ -96,8 +96,7 @@
        emacs-lisp
        nix
        cc
-       (org             ; organize your plain life in plain text
-        +pretty)         ; tasing is believing
+       (org +pretty)         ; tasing is believing
        (python +lsp)           ; beautiful is better than ugly
 
        markdown          ; writing docs for people to ignore

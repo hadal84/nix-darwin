@@ -104,12 +104,12 @@
     };
 
     haveno-reto = {
-      url = "https://github.com/retoaccess1/haveno-reto/releases/latest/download/haveno-v1.8.0-macos-aarch64-installer.dmg";
+      url = "https://github.com/retoaccess1/haveno-reto/releases/download/v1.8.0-reto/haveno-v1.8.0-macos-aarch64-installer.dmg";
       flake = false;
     };
 
     bisq2 = {
-      url = "https://github.com/bisq-network/bisq2/releases/latest/download/Bisq-aarch64-2.1.11.dmg";
+      url = "https://github.com/bisq-network/bisq2/releases/download/v2.1.11/Bisq-aarch64-2.1.11.dmg";
       flake = false;
     };
 
