@@ -43,6 +43,7 @@
       "stremio"
       "ungoogled-chromium"
       "vlc"
+      "reaper"
       "robloxstudio"
       "roblox"
       "vesktop"

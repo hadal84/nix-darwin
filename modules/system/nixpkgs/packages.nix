@@ -13,11 +13,13 @@
     uv
     vim
     git
+    gdb
     lsd
     fzf
     bat
     ruff
     skhd
+    lldb
     tree
     btop
     qpdf
