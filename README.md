@@ -29,11 +29,12 @@ it should ideally not be run under a non-darwin host for the custom derivations 
   - [doom-emacs](https://github.com/marienz/nix-doom-emacs-unstraightened)
   - [spicetify](https://github.com/Gerg-L/spicetify-nix)
   - [zen-browser](https://github.com/0xc000022070/zen-browser-flake)
-- 4-node custom proxy configured with clash-verge:
+- 5-node custom proxy configured with clash-verge:
   - [hysteria2](https://v2.hysteria.network/)
   - [wireguard](https://www.wireguard.com/)
   - [xray REALITY](https://github.com/xtls/xray-core)
   - local [byeDPI](https://github.com/hufrea/byedpi)
+  - tor-daemon
 
 ## structure
 the clash verge and ssh configurations are fully encrypted with agenix, anything else is available under home/ or system/config/
