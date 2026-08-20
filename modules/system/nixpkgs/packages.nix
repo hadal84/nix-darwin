@@ -41,6 +41,7 @@
     cmatrix
     pyright
     hunspell
+    clang_22
     hercules
     nix-tree
     fastfetch

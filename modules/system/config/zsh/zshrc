@@ -6,7 +6,6 @@
 # paths
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export EDITOR="emacsclient -c -a ''"
-export CLANG_CONFIG_FILE_USER_DIR="$HOME/.config/clang"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 
 # aliases
@@ -15,6 +14,7 @@ alias cat="bat"
 alias python="python3"
 alias pip="pip3"
 alias tmacs="emacs -nw"
+alias "clang++"="clang++ --config ~/.config/clang/clang++.cfg"
 alias ls="lsd"
 alias rm="trash"
 alias emacsd="/Applications/Emacs.app/Contents/MacOS/Emacs --daemon"
