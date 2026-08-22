@@ -56,6 +56,7 @@
     brews = [
       "pure"
       "nicotine-plus"
+      "mingw-w64"
     ];
 
     # masApps = {
