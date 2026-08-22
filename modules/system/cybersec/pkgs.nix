@@ -35,8 +35,10 @@
     tor
     sqlmap
     openvpn
+    subfinder
     radare2
     gdb
     byedpi
+    wafw00f
   ];
 }
