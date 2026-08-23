@@ -30,6 +30,7 @@
     sherlock
     holehe
     hashcat
+    arp-scan
     ghidra
     nmap
     tor

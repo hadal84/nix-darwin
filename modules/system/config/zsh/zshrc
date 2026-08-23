@@ -23,6 +23,7 @@ alias ":q"=exit # yeah yeah i know this is miserable
 alias show-history="history | grep -v history | grep"
 alias nixlavat="lavat -g -c bd8bfa -k 52a3ff -b 8 -r 10 -R 3 -G"
 alias ip-info='curl ipinfo.io'
+alias local-scan="sudo arp-scan -I en0 --localnet"
 
 # services that safely need to be restarted upon rebuild
 services=("emacs")
