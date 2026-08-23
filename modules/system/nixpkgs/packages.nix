@@ -39,6 +39,7 @@
     ktlint
     ripgrep
     cmatrix
+    libllvm
     pyright
     hunspell
     clang_22

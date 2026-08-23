@@ -16,6 +16,7 @@
 
     brews = [
       "hydra"
+      "p0f"
     ];
 
     masApps = {
