@@ -3,7 +3,7 @@
 	email = 143954694+hadal84@users.noreply.github.com
 	username = hadal84
 [core]
-	editor = vim
+	editor = emacsclient -c -a ''
 	pager = delta
 [column]
 	ui = auto
