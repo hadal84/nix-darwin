@@ -2,7 +2,7 @@
   description = "cyberia-mono";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     multiverse.url = "github:fzakaria/nixpkgs-multiverse";
@@ -11,10 +11,9 @@
     nur.url = "github:nix-community/NUR";
     agenix.url = "github:ryantm/agenix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    herdr.url="github:ogulcancelik/herdr";
 
     nix-darwin = {
-      url = "github:nix-darwin/nix-darwin";
+      url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -111,6 +110,11 @@
     bisq2 = {
       url = "https://github.com/bisq-network/bisq2/releases/download/v2.1.11/Bisq-aarch64-2.1.11.dmg";
       flake = false;
+    };
+
+    herdr = {
+      url = "github:ogulcancelik/herdr";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
   };
