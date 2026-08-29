@@ -62,7 +62,6 @@
 
     ghostty-bin
     obsidian
-    vscodium
     sioyek
     cinny-desktop
     zoom-us
