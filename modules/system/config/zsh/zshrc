@@ -22,8 +22,6 @@ alias reloadbar="sketchybar --reload"
 alias ":q"=exit # yeah yeah i know this is miserable
 alias show-history="history | grep -v history | grep"
 alias nixlavat="lavat -g -c bd8bfa -k 52a3ff -b 8 -r 10 -R 3 -G"
-alias ip-info='curl ipinfo.io'
-alias local-scan="sudo arp-scan -I en0 --localnet"
 
 # services that safely need to be restarted upon rebuild
 services=("emacs")
@@ -32,6 +30,10 @@ services=("emacs")
 alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec zsh && killall ${services[@]}"
 alias update="sudo -H nix flake update && rebuild"
 alias cleanup="sudo nix-collect-garbage -d"
+
+# security [en0]
+alias ip-info='curl ipinfo.io'
+alias local-scan="sudo arp-scan -I en0 --localnet"
 
 # z/os
 function z() {
