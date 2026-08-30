@@ -32,6 +32,7 @@
     holehe
     hashcat
     arp-scan
+    aircrack-ng
     ghidra
     nmap
     tor
