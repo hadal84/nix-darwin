@@ -107,8 +107,8 @@
       flake = false;
     };
 
-    bisq2 = {
-      url = "https://github.com/bisq-network/bisq2/releases/download/v2.1.11/Bisq-aarch64-2.1.11.dmg";
+    bisq = {
+      url = "https://github.com/bisq-network/bisq/releases/download/v1.10.7/Bisq-aarch64-1.10.7.dmg";
       flake = false;
     };
 

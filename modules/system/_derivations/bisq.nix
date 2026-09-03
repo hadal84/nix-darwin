@@ -1,7 +1,7 @@
 { src, lib, stdenvNoCC, undmg }:
 
 stdenvNoCC.mkDerivation rec {
-  pname = "bisq2";
+  pname = "bisq";
   version = "latest";
 
   inherit src;
@@ -28,7 +28,7 @@ stdenvNoCC.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description = "Bisq2 Desktop Application";
+    description = "Bisq1 Desktop Application";
     homepage = "https://bisq.network";
     platforms = platforms.darwin;
   };

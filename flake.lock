@@ -89,16 +89,16 @@
         "type": "github"
       }
     },
-    "bisq2": {
+    "bisq": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-UvUAvF/ILNngKBcHRtlcVCBZWZJRDCj+Iqd5JzRu0Ls=",
+        "narHash": "sha256-UCzzy1t8d2CUvA+mQhg5xvoqecIFhR65bP0HQcXo5ns=",
         "type": "file",
-        "url": "https://github.com/bisq-network/bisq2/releases/download/v2.1.11/Bisq-aarch64-2.1.11.dmg"
+        "url": "https://github.com/bisq-network/bisq/releases/download/v1.10.7/Bisq-aarch64-1.10.7.dmg"
       },
       "original": {
         "type": "file",
-        "url": "https://github.com/bisq-network/bisq2/releases/download/v2.1.11/Bisq-aarch64-2.1.11.dmg"
+        "url": "https://github.com/bisq-network/bisq/releases/download/v1.10.7/Bisq-aarch64-1.10.7.dmg"
       }
     },
     "brew-src": {
@@ -841,7 +841,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
-        "bisq2": "bisq2",
+        "bisq": "bisq",
         "brew-src": "brew-src",
         "flake-parts": "flake-parts",
         "frc-nix": "frc-nix",
