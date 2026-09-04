@@ -60,6 +60,8 @@ prompt pure
 # simple macos utilities
 alias gatekeeper="xattr -d com.apple.quarantine"
 alias ccache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder && echo DNS cache cleared."
+alias list-dns="scutil --dns | grep 'nameserver\[[0-9]*\]'"
+alias reset-dns="sudo networksetup -setdnsservers "Wi-Fi" Empty"
 alias fixmount="sudo pkill -f fsck"
 
 eval "$(zoxide init zsh --cmd cd)"
