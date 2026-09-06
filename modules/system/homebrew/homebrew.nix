@@ -51,6 +51,7 @@
       "electrum-ltc"
       "electrum"
       "monero-wallet"
+      "heroic" # exclusively for slime rancher
     ];
 
     brews = [
