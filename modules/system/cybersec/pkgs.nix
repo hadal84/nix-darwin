@@ -12,6 +12,7 @@
       "tor-browser"
       "clash-verge-rev"
       "burp-suite"
+      "wireshark-chmodbpf"
     ];
 
     brews = [
