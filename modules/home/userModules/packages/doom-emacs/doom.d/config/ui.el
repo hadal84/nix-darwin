@@ -7,7 +7,12 @@
 ; (setq display-line-numbers-type 'nil)
 
 (set-frame-parameter (selected-frame) 'title-bar-color "#000000")
-(setq frame-title-format nil)
+(setq frame-title-format "%b - Emacs")
+
+(setq frame-resize-pixelwise t)
+(setq window-resize-pixelwise t)
+(add-to-list 'default-frame-alist '(tool-bar-lines . 0))
+(add-to-list 'default-frame-alist '(menu-bar-lines . 0))
 
 (setq custom-safe-themes t)
 (defvar my-stylix-theme-dir (expand-file-name ".config/doom/" (getenv "HOME")))

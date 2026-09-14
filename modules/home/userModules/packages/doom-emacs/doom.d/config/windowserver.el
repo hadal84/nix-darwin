@@ -6,6 +6,3 @@
 
 ;;; hook that calls the frame fixer function upon frame generation
 (add-hook 'after-make-frame-functions #'hadal84/fix-new-frame-theme)
-
-;;; function that starts the inital frame in a fullscreen state
-(add-to-list 'initial-frame-alist '(fullscreen . maximized))
