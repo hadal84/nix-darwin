@@ -52,7 +52,6 @@
       "electrum"
       "monero-wallet"
       "heroic" # exclusively for slime rancher
-      "iina"
     ];
 
     brews = [
@@ -61,15 +60,15 @@
       "mingw-w64"
     ];
 
-    # masApps = {
-    #  "DaVinci Resolve" = 571213070;
-    #  "Goodnotes" = 1444383602;
-    # }; # mas is broken as hell right now.
+    masApps = {
+     "DaVinci Resolve" = 571213070;
+     "Goodnotes" = 1444383602;
+    };
 
     onActivation = {
       cleanup = "zap";
-      autoUpdate = false;
-      upgrade = false; # change to true when issue is resolved
+      autoUpdate = true;
+      upgrade = true; # change to true when issue is resolved
       extraFlags = [
         "--force-cleanup"
       ];
