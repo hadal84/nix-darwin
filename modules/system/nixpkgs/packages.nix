@@ -66,10 +66,10 @@
     sioyek
     cinny-desktop
     zoom-us
+    nicotine-plus
 
     inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
-    (import ../_derivations/nicotine.nix { inherit stdenvNoCC; })
     (pkgs.callPackage ../_derivations/z-library.nix { })
     (pkgs.callPackage ../_derivations/haveno-reto.nix { src = inputs.haveno-reto; })
     (pkgs.callPackage ../_derivations/bisq.nix { src = inputs.bisq; })

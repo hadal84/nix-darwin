@@ -55,7 +55,6 @@
 
     brews = [
       "pure"
-      "nicotine-plus"
       "mingw-w64"
     ];
 
