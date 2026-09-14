@@ -61,6 +61,7 @@
     lixPackageSets.git.nixpkgs-review
 
     ghostty-bin
+    omniwm
     obsidian
     sioyek
     cinny-desktop

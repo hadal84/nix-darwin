@@ -2,13 +2,14 @@
 
 {
   launchd.user.agents.omniwm = {
-    command = "/Applications/omniwm.app/Contents/MacOS/omniwm";
+    command = "open -g -a '/Applications/Nix Apps/OmniWM.app'";
     serviceConfig = {
       RunAtLoad = true;
-      KeepAlive = true;
+      KeepAlive = false;
       ProcessType = "Interactive";
-      StandardOutPath = "/tmp/omniwm.out.log";
-      StandardErrorPath = "/tmp/omniwm.err.log";
+      AbandonProcessGroup = true;
+      StandardOutPath = "/tmp/omni.out.log";
+      StandardErrorPath = "/tmp/omni.err.log";
     };
   };
 }

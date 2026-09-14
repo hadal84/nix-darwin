@@ -42,14 +42,14 @@ moveMouseToFocusedWindow = false
 raiseOnMouseFocus = false
 
 [gaps]
-fullscreenUsesOuterGaps = false
-size = 16.0
+fullscreenUsesOuterGaps = true
+size = 9.0
 
 [gaps.outer]
-bottom = 0.0
-left = 0.0
-right = 0.0
-top = 0.0
+bottom = 9.0
+left = 9.0
+right = 9.0
+top = 44.0
 
 [general]
 animationsEnabled = true
@@ -59,7 +59,7 @@ hyperKeyModifiers = "Control+Option+Shift+Command"
 ipcEnabled = true
 preventSleepEnabled = false
 systemHyperTrigger = "None"
-updateChecksEnabled = true
+updateChecksEnabled = false
 
 [gestures]
 fingerCount = 3
@@ -86,9 +86,8 @@ margin = 1
 
 [niri]
 alwaysCenterSingleColumn = false
-centerFocusedColumn = "never"
+centerFocusedColumn = "onOverflow"
 containerPrimarySpanPresets = [0.3333333333333333, 0.5, 0.6666666666666666]
-defaultContainerPrimarySpan = 0.5
 infiniteLoop = false
 singleWindowFit = "fill"
 visibleContainerCount = 2
@@ -329,75 +328,75 @@ binding = "Unassigned"
 id = "assignFocusedWindowToScratchpad.10"
 
 [[hotkeys]]
-binding = "Option+1"
+binding = "Command+1"
 id = "switchWorkspace.0"
 
 [[hotkeys]]
-binding = "Option+Shift+1"
+binding = "Shift+Command+1"
 id = "moveToWorkspace.0"
 
 [[hotkeys]]
-binding = "Option+2"
+binding = "Command+2"
 id = "switchWorkspace.1"
 
 [[hotkeys]]
-binding = "Option+Shift+2"
+binding = "Shift+Command+2"
 id = "moveToWorkspace.1"
 
 [[hotkeys]]
-binding = "Option+3"
+binding = "Command+3"
 id = "switchWorkspace.2"
 
 [[hotkeys]]
-binding = "Option+Shift+3"
+binding = "Shift+Command+3"
 id = "moveToWorkspace.2"
 
 [[hotkeys]]
-binding = "Option+4"
+binding = "Command+4"
 id = "switchWorkspace.3"
 
 [[hotkeys]]
-binding = "Option+Shift+4"
+binding = "Shift+Command+4"
 id = "moveToWorkspace.3"
 
 [[hotkeys]]
-binding = "Option+5"
+binding = "Command+5"
 id = "switchWorkspace.4"
 
 [[hotkeys]]
-binding = "Option+Shift+5"
+binding = "Shift+Command+5"
 id = "moveToWorkspace.4"
 
 [[hotkeys]]
-binding = "Option+6"
+binding = "Command+6"
 id = "switchWorkspace.5"
 
 [[hotkeys]]
-binding = "Option+Shift+6"
+binding = "Shift+Command+6"
 id = "moveToWorkspace.5"
 
 [[hotkeys]]
-binding = "Option+7"
+binding = "Command+7"
 id = "switchWorkspace.6"
 
 [[hotkeys]]
-binding = "Option+Shift+7"
+binding = "Shift+Command+7"
 id = "moveToWorkspace.6"
 
 [[hotkeys]]
-binding = "Option+8"
+binding = "Command+8"
 id = "switchWorkspace.7"
 
 [[hotkeys]]
-binding = "Option+Shift+8"
+binding = "Shift+Command+8"
 id = "moveToWorkspace.7"
 
 [[hotkeys]]
-binding = "Option+9"
+binding = "Command+9"
 id = "switchWorkspace.8"
 
 [[hotkeys]]
-binding = "Option+Shift+9"
+binding = "Shift+Command+9"
 id = "moveToWorkspace.8"
 
 [[hotkeys]]
@@ -485,19 +484,19 @@ binding = "Unassigned"
 id = "switchWorkspace.previous"
 
 [[hotkeys]]
-binding = "Option+Left Arrow"
+binding = "Command+H"
 id = "focus.left"
 
 [[hotkeys]]
-binding = "Option+Down Arrow"
+binding = "Command+J"
 id = "focus.down"
 
 [[hotkeys]]
-binding = "Option+Up Arrow"
+binding = "Command+K"
 id = "focus.up"
 
 [[hotkeys]]
-binding = "Option+Right Arrow"
+binding = "Command+L"
 id = "focus.right"
 
 [[hotkeys]]
@@ -549,7 +548,7 @@ binding = "Control+Option+Shift+Up Arrow"
 id = "moveWindowToWorkspaceUp"
 
 [[hotkeys]]
-binding = "Control+Option+Shift+Down Arrow"
+binding = "Shift+Command+J"
 id = "moveWindowToWorkspaceDown"
 
 [[hotkeys]]
@@ -681,7 +680,7 @@ binding = "Unassigned"
 id = "moveWindowToMonitor.down"
 
 [[hotkeys]]
-binding = "Option+Return"
+binding = "Unassigned"
 id = "toggleFullscreen"
 
 [[hotkeys]]
@@ -857,7 +856,7 @@ binding = "Unassigned"
 id = "cycleWindowSecondarySpanBackward"
 
 [[hotkeys]]
-binding = "Option+Shift+F"
+binding = "Shift+Command+D"
 id = "toggleContainerFullPrimarySpan"
 
 [[hotkeys]]
@@ -953,7 +952,7 @@ binding = "Unassigned"
 id = "preselectClear"
 
 [[hotkeys]]
-binding = "Control+Option+Space"
+binding = "Unassigned"
 id = "openCommandPalette"
 
 [[hotkeys]]
@@ -1041,7 +1040,6 @@ name = "5"
 type = "main"
 
 [[workspaces]]
-displayName = "❤️"
 id = "5953F2BF-A378-4266-91B2-287174C4FA4D"
 layoutType = "niri"
 name = "6"
@@ -1050,7 +1048,6 @@ name = "6"
 type = "secondary"
 
 [[workspaces]]
-displayName = "🚀"
 id = "A7D5E104-6985-4516-8ED5-07F144F2A33D"
 layoutType = "niri"
 name = "7"

@@ -10,7 +10,6 @@
     enable = true;
 
     casks = [
-      "omniwm"
       "alfred"
       "affinity"
       "android-studio"

@@ -9,20 +9,17 @@
       "homebrew/homebrew-core" = inputs.homebrew-core;
       "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
       "homebrew/homebrew-cask" = inputs.homebrew-cask;
-      "barutsrb/homebrew-tap" = inputs.homebrew-barutsrb;
     };
     trust = {
       formulae = [
 
       ];
       casks = [
-        "barutsrb/tap/omniwm"
       ];
       commands = [
 
       ];
       taps = [
-        "barutsrb/tap"
       ];
     };
     mutableTaps = false;
