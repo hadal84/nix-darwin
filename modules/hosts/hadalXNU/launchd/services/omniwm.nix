@@ -2,7 +2,7 @@
 
 {
   launchd.user.agents.omniwm = {
-    command = "open -g -a '/Applications/Nix Apps/OmniWM.app'";
+    command = "open -g -a '/Applications/OmniWM.app'";
     serviceConfig = {
       RunAtLoad = true;
       KeepAlive = false;
