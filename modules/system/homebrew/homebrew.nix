@@ -52,6 +52,7 @@
       "electrum"
       "monero-wallet"
       "heroic" # exclusively for slime rancher
+      "intellij-idea" 
     ];
 
     brews = [
