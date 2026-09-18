@@ -53,7 +53,7 @@
         }
         {
           type = "packages";
-          format = "{} (nix-darwin)";
+          text = "nix-store --query --requisites /run/current-system | wc -l && echo (nix-darwin)";
           key = "packages       ";
           keyColor = keyColor;
         }
