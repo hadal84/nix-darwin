@@ -44,8 +44,6 @@
       "ungoogled-chromium"
       "vlc"
       "reaper"
-      "robloxstudio"
-      "roblox"
       "vesktop"
       "appcleaner"
       "electrum-ltc"
