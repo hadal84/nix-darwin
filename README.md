@@ -47,7 +47,8 @@ every single aspect of the system is declared in this file, from the launchd age
 │   ├── flake-modules
 │   │   ├── base.nix
 │   │   ├── home-manager.nix
-│   │   └── nix-homebrew.nix
+│   │   ├── nix-homebrew.nix
+│   │   └── overlays.nix
 │   └── xnu
 │       └── xnu.nix
 ├── flake.lock
@@ -62,6 +63,8 @@ every single aspect of the system is declared in this file, from the launchd age
 │   │           │   ├── doom-emacs.nix
 │   │           │   └── doom.d
 │   │           │       ├── config
+│   │           │       │   ├── hunspell.el
+│   │           │       │   ├── keys.el
 │   │           │       │   ├── mpremote.el
 │   │           │       │   ├── nixfmt.el
 │   │           │       │   ├── platformio.el
@@ -82,6 +85,8 @@ every single aspect of the system is declared in this file, from the launchd age
 │   │           │           └── kanagawa-theme.el
 │   │           ├── spicetify
 │   │           │   └── spicetify.nix
+│   │           ├── vscodium
+│   │           │   └── vscodium.nix
 │   │           └── zen-browser
 │   │               └── zen-browser.nix
 │   ├── hosts
@@ -92,17 +97,18 @@ every single aspect of the system is declared in this file, from the launchd age
 │   │       │       ├── alfred.nix
 │   │       │       ├── byedpi.nix
 │   │       │       ├── ghostty.nix
-│   │       │       ├── hydroxide.nix
 │   │       │       ├── omniwm.nix
-│   │       │       └── rclone.nix
+│   │       │       ├── proton-mail-bridge.nix
+│   │       │       ├── rclone.nix
+│   │       │       └── tor.nix
 │   │       ├── systemSettings.nix
 │   │       └── WindowServer
 │   │           └── dock.nix
 │   └── system
 │       ├── _derivations
-│       │   ├── byedpi.nix
+│       │   ├── bisq.nix
 │       │   ├── c3270.nix
-│       │   ├── nicotine.nix
+│       │   ├── haveno-reto.nix
 │       │   └── z-library.nix
 │       ├── config
 │       │   ├── _wezterm
@@ -111,6 +117,13 @@ every single aspect of the system is declared in this file, from the launchd age
 │       │   ├── _yabai
 │       │   │   ├── yabai.nix
 │       │   │   └── yabairc
+│       │   ├── _zellij
+│       │   │   ├── config.kdl
+│       │   │   ├── layouts
+│       │   │   │   └── default.kdl
+│       │   │   ├── themes
+│       │   │   │   └── Black_Metal.kdl
+│       │   │   └── zellij.nix
 │       │   ├── alfred
 │       │   │   ├── Alfred.alfredpreferences
 │       │   │   │   ├── preferences
@@ -131,12 +144,6 @@ every single aspect of the system is declared in this file, from the launchd age
 │       │   │   │   │           │       └── prefs.plist
 │       │   │   │   │           └── hotkey
 │       │   │   │   │               └── prefs.plist
-│       │   │   │   ├── remote
-│       │   │   │   │   ├── images
-│       │   │   │   │   │   ├── items
-│       │   │   │   │   │   └── pages
-│       │   │   │   │   ├── local
-│       │   │   │   │   └── pages
 │       │   │   │   └── themes
 │       │   │   │       └── theme.fileimport.50C22BC5-D7AF-4A2A-8AA1-25D43E2FD605
 │       │   │   │           └── theme.json
@@ -165,6 +172,9 @@ every single aspect of the system is declared in this file, from the launchd age
 │       │   │   └── themes
 │       │   │       ├── solarized_dark
 │       │   │       └── tricolor
+│       │   ├── clang
+│       │   │   ├── clang.nix
+│       │   │   └── clang++.cfg
 │       │   ├── fetch
 │       │   │   ├── fetch.nix
 │       │   │   └── images
@@ -179,11 +189,16 @@ every single aspect of the system is declared in this file, from the launchd age
 │       │   ├── git
 │       │   │   ├── git.nix
 │       │   │   └── gitconfig
+│       │   ├── herdr
+│       │   │   ├── config.toml
+│       │   │   └── herdr.nix
 │       │   ├── obsidian
 │       │   │   └── obsidian.nix
 │       │   ├── omniwm
 │       │   │   ├── omniwm.nix
 │       │   │   └── settings.toml
+│       │   ├── prism-launcher
+│       │   │   └── prism.nix
 │       │   ├── sketchybar
 │       │   │   ├── plugins
 │       │   │   │   ├── battery.sh
@@ -203,18 +218,11 @@ every single aspect of the system is declared in this file, from the launchd age
 │       │   │   └── ssh.nix
 │       │   ├── vesktop
 │       │   │   └── vesktop.nix
-│       │   ├── vscodium
-│       │   │   └── vscodium.nix
-│       │   ├── zellij
-│       │   │   ├── config.kdl
-│       │   │   ├── layouts
-│       │   │   │   └── default.kdl
-│       │   │   ├── themes
-│       │   │   │   └── Black_Metal.kdl
-│       │   │   └── zellij.nix
 │       │   └── zsh
 │       │       ├── zsh.nix
 │       │       └── zshrc
+│       ├── cybersec
+│       │   └── pkgs.nix
 │       ├── homebrew
 │       │   ├── brews
 │       │   │   └── cava.nix
@@ -251,26 +259,34 @@ every single aspect of the system is declared in this file, from the launchd age
 │           │   └── ocr-a.ttf
 │           └── wallpapers
 │               ├── antagonist.webp
-│               ├── bridget.jpeg
+│               ├── apxtwn.png
 │               ├── carti.webp
 │               ├── cdghair.jpeg
+│               ├── cyberia.png
 │               ├── defeat.jpeg
-│               ├── ecstasy.png
-│               ├── gothbridget.webp
+│               ├── dot-hands.jpg
+│               ├── eddie.png
+│               ├── gezi.png
+│               ├── i-accept.png
+│               ├── inverted.png
 │               ├── jules.jpg
-│               └── lain.webp
+│               ├── lain.webp
+│               ├── mcqueen.png
+│               ├── msry.png
+│               ├── nothing.webp
+│               ├── skeleton.webp
+│               ├── tokyo.png
+│               └── tower.png
 ├── README.md
 ├── scripts
 │   ├── apple.sh
 │   └── bootstrap.sh
 └── secrets
+    ├── clash-verge-tor.age
     ├── clash-verge.age
     ├── github-ssh-key.age
-    ├── hydroxide.age
     ├── phenoxide-ssh-key.age
     ├── rclone.age
     ├── secrets.nix
     └── ssh-config.age
-
-83 directories, 146 files
 ```
