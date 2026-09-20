@@ -101,6 +101,9 @@ singleWindowFit = "fill"
 visibleContainerCount = 2
 
 [overview]
+invertScrollDirection = false
+matchFocusBorder = true
+mouseScrollSpeed = 1.0
 zoom = 1.0
 
 [overview.backdrop]
@@ -260,9 +263,8 @@ minHeight = 320.0
 minWidth = 660.0
 
 [[appRules]]
-appNameSubstring = "emacs"
-bundleId = ""
-id = "34551057-0568-442D-8443-3D546EEA8FEA"
+bundleId = "org.gnu.Emacs"
+id = "67530525-F869-4F48-8E78-94B70FF89EB7"
 layout = "tile"
 
 [[hotkeys]]
@@ -850,11 +852,11 @@ binding = "Unassigned"
 id = "moveColumnToIndex.9"
 
 [[hotkeys]]
-binding = "Option+Period"
+binding = "Unassigned"
 id = "cycleSizeForward"
 
 [[hotkeys]]
-binding = "Option+Comma"
+binding = "Unassigned"
 id = "cycleSizeBackward"
 
 [[hotkeys]]
@@ -886,11 +888,11 @@ binding = "Control+Option+R"
 id = "resetWindowSecondarySpan"
 
 [[hotkeys]]
-binding = "Option+Minus"
+binding = "Unassigned"
 id = "setContainerPrimarySpan.decrease10Percent"
 
 [[hotkeys]]
-binding = "Option+Equal"
+binding = "Unassigned"
 id = "setContainerPrimarySpan.increase10Percent"
 
 [[hotkeys]]

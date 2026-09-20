@@ -9,7 +9,11 @@ in
 {
   programs.doom-emacs = {
     enable = true;
-    emacs = stablePkgs.emacs;
+    emacs = stablePkgs.emacs-macport.overrideAttrs (old: {
+      patches = (old.patches or []) ++ [
+        (inputs.emacs-titlebar-patch)
+      ];
+    });
     doomDir = ./doom.d;
     extraPackages = epkgs: [
       epkgs.base16-theme
@@ -18,7 +22,7 @@ in
   };
 
   services.emacs = {
-    enable = true;
+    enable = false; # handled via custom service
   };
 
   home.file.".config/doom/base16-stylix-theme.el".text = with config.lib.stylix.colors.withHashtag; ''

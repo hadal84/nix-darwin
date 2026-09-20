@@ -7,7 +7,9 @@
 ; (setq display-line-numbers-type 'nil)
 
 (set-frame-parameter (selected-frame) 'title-bar-color "#000000")
-(setq frame-title-format "%b - Emacs")
+(add-to-list 'default-frame-alist '(mac-appearance . dark))
+(add-to-list 'default-frame-alist '(mac-transparent-title-bar . t))
+(setq frame-title-format nil)
 
 (setq frame-resize-pixelwise t)
 (setq window-resize-pixelwise t)
