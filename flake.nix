@@ -117,11 +117,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    emacs-titlebar-patch = {
-      url = "https://raw.githubusercontent.com/railwaycat/homebrew-emacsmacport/refs/heads/master/patches/emacs-26.2-rc1-mac-7.5-no-title-bar.diff";
-      flake = false;
-    };
-
   };
 
   outputs =
