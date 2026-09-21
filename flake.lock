@@ -211,18 +211,6 @@
         "type": "github"
       }
     },
-    "emacs-titlebar-patch": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-+k96Pc2j7/6wvoBPcBIze3+OX6oOhBiMKjdCUG1IN7w=",
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/railwaycat/homebrew-emacsmacport/refs/heads/master/patches/emacs-26.2-rc1-mac-7.5-no-title-bar.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/railwaycat/homebrew-emacsmacport/refs/heads/master/patches/emacs-26.2-rc1-mac-7.5-no-title-bar.diff"
-      }
-    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -854,7 +842,6 @@
         "agenix": "agenix",
         "bisq": "bisq",
         "brew-src": "brew-src",
-        "emacs-titlebar-patch": "emacs-titlebar-patch",
         "flake-parts": "flake-parts",
         "frc-nix": "frc-nix",
         "haveno-reto": "haveno-reto",
