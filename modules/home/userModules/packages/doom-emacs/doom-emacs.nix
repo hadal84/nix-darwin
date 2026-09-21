@@ -12,6 +12,7 @@ in
     emacs = stablePkgs.emacs-macport.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (./patches/no-dec-patch.diff)
+        (./patches/emacs-mac-29.2-rc-1-multi-tty.diff)
       ];
     });
     doomDir = ./doom.d;
