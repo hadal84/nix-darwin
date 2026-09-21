@@ -1,0 +1,78 @@
+diff --git a/lisp/cus-start.el b/lisp/cus-start.el
+index 17c8e5e93f..386661e579 100644
+--- a/lisp/cus-start.el
++++ b/lisp/cus-start.el
+@@ -601,6 +601,7 @@ Leaving \"Default\" unchecked is equivalent with specifying a default of
+ 	     (mac-pass-command-to-system mac boolean "22.1")
+ 	     (mac-pass-control-to-system mac boolean "22.1")
+ 	     (mac-drawing-use-gcd mac boolean "24.4")
++	     (mac-use-title-bar mac boolean "25.2")
+ 	     (mac-frame-tabbing mac (choice (const automatic) (const inverted)
+                                             (const nil) (const t)) "24.5")
+ 	     (mac-ignore-accessibility mac boolean "25.3")
+diff --git a/src/macappkit.m b/src/macappkit.m
+index 7df321374a..e523df0149 100644
+--- a/src/macappkit.m
++++ b/src/macappkit.m
+@@ -2513,11 +2513,20 @@ - (void)setupWindow
+   if (!FRAME_TOOLTIP_P (f))
+     {
+       if (!self.shouldBeTitled)
+-	windowStyle = NSWindowStyleMaskBorderless;
++        windowStyle = NSWindowStyleMaskBorderless;
+       else
+-	windowStyle = (NSWindowStyleMaskTitled | NSWindowStyleMaskClosable
+-		       | NSWindowStyleMaskMiniaturizable
+-		       | NSWindowStyleMaskResizable);
++        {
++          if (mac_use_title_bar) {
++            windowStyle = (NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |
++                           NSWindowStyleMaskMiniaturizable |
++                           NSWindowStyleMaskResizable);
++          } else {
++            windowStyle = (NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |
++                           NSWindowStyleMaskMiniaturizable |
++                           NSWindowStyleMaskResizable |
++                           NSWindowStyleMaskFullSizeContentView);
++          }
++        }
+     }
+   else
+     windowStyle = NSWindowStyleMaskBorderless;
+@@ -2552,6 +2561,15 @@ - (void)setupWindow
+ 					  styleMask:windowStyle
+ 					    backing:NSBackingStoreBuffered
+ 					      defer:YES];
++
++  if (!FRAME_TOOLTIP_P(f) && self.shouldBeTitled && !mac_use_title_bar) {
++      [window setTitlebarAppearsTransparent:YES];
++      [window setTitleVisibility:NSWindowTitleHidden];
++      [[window standardWindowButton:NSWindowCloseButton] setHidden:YES];
++      [[window standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
++      [[window standardWindowButton:NSWindowZoomButton] setHidden:YES];
++  }
++  
+ #if USE_ARC
+   /* Increase retain count to accommodate itself to
+      released-when-closed on ARC.  Just setting released-when-closed
+diff --git a/src/macterm.c b/src/macterm.c
+index 330525d1cd..a658182a42 100644
+--- a/src/macterm.c
++++ b/src/macterm.c
+@@ -6225,6 +6225,16 @@ tabbing is disallowed and preferred, respectively.
+ This variable has no effect on OS X 10.11 and earlier.  */);
+   Vmac_frame_tabbing = Qautomatic;
+ 
++  DEFVAR_BOOL ("mac-use-title-bar", mac_use_title_bar,
++    doc: /*Non-nil means to include the title bar on frames.  Nil means to
++omit the title bar on OSX >= 10.7.  This variable is ignored on OSX <
++10.7. Note that the first frame per emacs session (unless it is an
++emacsclient) will use the default value of this variable (nil--do not
++include a title bar), ignoring (!) the user-set value of this
++variable. This is almost certainly due to a bug in the patch adding
++this variable. Default is nil.*/);
++  mac_use_title_bar = false;
++
+   DEFVAR_BOOL ("mac-ignore-accessibility", mac_ignore_accessibility,
+     doc: /* Non-nil means to ignore the system accessibility feature.
+ Emacspeak users may want to set this variable so it may not interfere

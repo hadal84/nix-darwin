@@ -4,11 +4,19 @@
 (setq doom-font (font-spec :family "CaskaydiaMono Nerd Font Mono" :size 18)
       doom-variable-pitch-font (font-spec :family "CaskaydiaMono Nerd Font Mono" :size 18))
 
-; (setq display-line-numbers-type 'nil)
+;(setq display-line-numbers-type 'nil)
 
-(set-frame-parameter (selected-frame) 'title-bar-color "#000000")
-(add-to-list 'default-frame-alist '(mac-appearance . dark))
-(add-to-list 'default-frame-alist '(mac-transparent-title-bar . t))
+;(set-frame-parameter (selected-frame) 'title-bar-color "#000000")
+
+;(add-to-list 'default-frame-alist '(mac-appearance . dark))
+;(add-to-list 'default-frame-alist '(mac-transparent-title-bar . t))
+;(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+;(add-to-list 'default-frame-alist '(ns-appearance . dark))
+
+(add-to-list 'default-frame-alist '(internal-border-width . 10))
+(setq mac-use-title-bar nil)
+
+(setq ns-use-proxy-icon nil)
 (setq frame-title-format nil)
 
 (setq frame-resize-pixelwise t)

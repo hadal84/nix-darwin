@@ -11,7 +11,7 @@ in
     enable = true;
     emacs = stablePkgs.emacs-macport.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
-        (inputs.emacs-titlebar-patch)
+        (./patches/no-dec-patch.diff)
       ];
     });
     doomDir = ./doom.d;
