@@ -49,11 +49,11 @@
     nixfmt-rs
     shellcheck
     sketchybar
-    temurin-bin
     hydra-check
     darwin.trash
     multimarkdown
     rust-analyzer
+    temurin-bin-25
     protonmail-bridge
     coreutils-prefixed
     hunspellDicts.tr_TR
