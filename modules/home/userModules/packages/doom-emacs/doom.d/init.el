@@ -93,11 +93,13 @@
        tty               ; improve the terminal Emacs experience
 
        :lang
+       (java +lsp +tree-sitter)
+       cc
+       (python +lsp)           ; beautiful is better than ugly
+
        emacs-lisp
        nix
-       cc
        (org +pretty)         ; tasing is believing
-       (python +lsp)           ; beautiful is better than ugly
 
        markdown          ; writing docs for people to ignore
        sh                ; she sells {ba,z,fi}sh shells on the C xor
