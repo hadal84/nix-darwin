@@ -49,6 +49,7 @@
     nixfmt-rs
     shellcheck
     sketchybar
+    temurin-bin
     hydra-check
     darwin.trash
     multimarkdown
