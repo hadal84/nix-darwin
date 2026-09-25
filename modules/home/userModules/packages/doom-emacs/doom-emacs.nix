@@ -1,17 +1,17 @@
 { inputs, nixpkgs, home-manager, config, pkgs, selfPath, ... }: 
 
-let
-
-stablePkgs = inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-
-in
-
 {
   programs.doom-emacs = {
     enable = true;
-    emacs = stablePkgs.emacs-macport.overrideAttrs (old: {
-      patches = (old.patches or []) ++ [
-        (./patches/no-dec-patch.diff)
+    emacs = pkgs.emacs-macport.overrideAttrs (old: {
+      version = "31-pr143";
+      src = inputs.emacs-mac-src;
+      patches = pkgs.lib.filter (p:
+        let patchPath = builtins.toString p; in
+        pkgs.lib.hasInfix "native-comp-driver-options" patchPath
+      ) (old.patches or []) ++ [
+	(./patches/31/traffic-lights.patch)
+	# (./patches/31/policy-fix.diff)
       ];
     });
     doomDir = ./doom.d;

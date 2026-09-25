@@ -1,0 +1,16 @@
+diff --git a/src/macappkit.m b/src/macappkit.m
+index ffc6eae07bf..84472af4540 100644
+--- a/src/macappkit.m
++++ b/src/macappkit.m
+@@ -2729,6 +2729,11 @@ - (void)setupWindow
+       [window setAcceptsMouseMovedEvents:YES];
+       if (window.hasTitleBar)
+ 	[self setupToolBarWithVisibility:(FRAME_EXTERNAL_TOOL_BAR (f))];
++
++      [[window standardWindowButton:NSWindowCloseButton] setHidden:YES];
++      [[window standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
++      [[window standardWindowButton:NSWindowZoomButton] setHidden:YES];
++
+       [self setupOverlayView];
+       [self updateOverlayViewParticipation];
+       if (!(windowManagerState & WM_STATE_FULLSCREEN)

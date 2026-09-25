@@ -1,0 +1,45 @@
+diff --git a/src/nsfns.m b/src/nsfns.m
+index 148bbc7923a..ac3b04980ca 100644
+--- a/src/nsfns.m
++++ b/src/nsfns.m
+@@ -1501,7 +1501,10 @@ Turn the input menu (an NSMenu) into a lisp list for tracking on lisp side.
+ 
+ #ifdef NS_IMPL_COCOA
+   /* If the app has previously been disabled, start it up again.  */
+-  [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
++  if ([NSApp activationPolicy] != NSApplicationActivationPolicyRegular) {
++      [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
++      [NSApp activateIgnoringOtherApps:YES];
++  }
+ #endif
+ 
+   [[EmacsView alloc] initFrameFromEmacs: f];
+diff --git a/src/nsterm.m b/src/nsterm.m
+index 288245dda87..a7fd7f36a26 100644
+--- a/src/nsterm.m
++++ b/src/nsterm.m
+@@ -5865,12 +5865,6 @@ static Lisp_Object ns_string_to_lispmod (const char *s)
+ 
+   block_input ();
+ 
+-#ifdef NS_IMPL_COCOA
+-  /* Rather than try to clean up the NS environment we can just
+-     disable the app and leave it waiting for any new frames.  */
+-  [NSApp setActivationPolicy:NSApplicationActivationPolicyProhibited];
+-#endif
+-
+   image_destroy_all_bitmaps (dpyinfo);
+   ns_delete_display (dpyinfo);
+   unblock_input ();
+@@ -6000,6 +5994,11 @@ Needs to be here because ns_initialize_display_info () uses AppKit classes.
+     return NULL;
+   [NSApp setDelegate: NSApp];
+ 
++#ifdef NS_IMPL_COCOA
++  /* Force Regular policy immediately to prevent window manager race conditions */
++  [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
++#endif
++
+   /* Start the select thread.  */
+   [NSThread detachNewThreadSelector:@selector (fd_handler:)
+                            toTarget:NSApp

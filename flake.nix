@@ -117,6 +117,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    emacs-mac-src = {
+      url = "github:jdtsmith/emacs-mac/pull/143/head";
+      flake = false;
+    };
+
   };
 
   outputs =

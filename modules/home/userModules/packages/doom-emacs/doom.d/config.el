@@ -1,7 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-(load! "config/keys")
 (load! "config/ui")
+(load! "config/keys")
 (load! "config/windowserver")
 (load! "config/variables")
 (load! "config/treemacs")

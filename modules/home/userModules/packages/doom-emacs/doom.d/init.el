@@ -1,5 +1,7 @@
 ;;; init.el --- Doom's universal bootstrapper -*- lexical-binding: t; no-byte-compile: t -*-
 
+(require 'compile)
+
 (doom! :input
        ;;layout            ; auie,ctsrnm is the superior home row
 

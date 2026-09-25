@@ -1,15 +1,38 @@
-;; Intercept standard Emacs kill signals (including Doom's :q workspace logic)
-(defun hadal84/prevent-server-shutdown ()
-  "Prevent server from shutting down when quitting the last frame, hide it instead."
-  (if (and (= (length (frame-list)) 1)
-           (not current-prefix-arg))  ;; Still allow forced quits with prefix arg (e.g. C-u C-x C-c)
-      (progn
-        (make-frame-invisible (selected-frame))
-        nil) ;; Return nil to abort the Emacs shutdown process
-    t))      ;; Return t to allow Emacs to exit gracefully
+;;; begin last window hook
 
-;; Add to the absolute front of the query functions (-100) so it runs before Doom prompts "Really exit?"
-(add-hook 'kill-emacs-query-functions #'hadal84/prevent-server-shutdown -100)
+(defun doom/force-hide-last-frame (orig-fn &optional frame force)
+  "If attempting to delete the last visible frame, force it to hide instead."
+  (let* ((target-frame (or frame (selected-frame)))
+         (visible-frames (seq-filter #'frame-visible-p (frame-list))))
+    (if (and (= (length visible-frames) 1)
+             (eq target-frame (car visible-frames)))
+        ;; The 't' parameter is critical. It bypasses the C-level safeguard 
+        ;; that throws the "sole visible or iconified frame" error.
+        (make-frame-invisible target-frame t)
+      (funcall orig-fn frame force))))
+
+(advice-add 'delete-frame :around #'doom/force-hide-last-frame)
+
+(defun doom/evil-hide-last-frame (orig-fn &rest args)
+  "Intercept window closing in Evil. If it's the last window, hide the frame."
+  (let ((visible-frames (seq-filter #'frame-visible-p (frame-list))))
+    ;; Check if this is the last window inside the last visible frame
+    (if (and (= (length (window-list)) 1)
+             (= (length visible-frames) 1))
+        (make-frame-invisible (selected-frame) t)
+      (apply orig-fn args))))
+
+(with-eval-after-load 'evil
+  (advice-add 'evil-quit :around #'doom/evil-hide-last-frame)
+  (advice-add 'evil-window-delete :around #'doom/evil-hide-last-frame))
+
+(add-hook 'mac-reopen-app-hook
+          (lambda ()
+            (let ((visible-frames (seq-filter #'frame-visible-p (frame-list))))
+              (when (= (length visible-frames) 0)
+                (make-frame-visible (car (frame-list)))))))
+
+;;; end last window hook
 
 ;;; function to apply current theme to new frames in the QUARTZ display server
 (defun hadal84/fix-new-frame-theme (&optional frame)
@@ -17,22 +40,18 @@
     (when (display-graphic-p)
       (load-theme doom-theme t))))
 
-;; Intercept standard shutdown commands (:q, :wq, C-x C-c) to prevent server death
-(defadvice! +mac/hide-instead-of-kill-terminal (orig-fn &optional arg)
-  "Intercepts kill-terminal (triggered by :q on the last frame) to hide instead."
-  :around #'save-buffers-kill-terminal
-  (if (and (= (length (frame-list)) 1) (not arg))
-      (make-frame-invisible (selected-frame))
-    (funcall orig-fn arg)))
-
 ;;; hook that calls the frame fixer function upon frame generation
 (add-hook 'after-make-frame-functions #'hadal84/fix-new-frame-theme)
 
-;; Hide the initial frame spawned at startup
-(add-to-list 'initial-frame-alist '(visibility . nil))
+(defun my/mac-escalate-emacsclient-frame ()
+  "Force macOS to focus the emacsclient frame by escalating via AppleScript."
+  (when (display-graphic-p)
+    (mac-do-applescript "tell application \"System Events\" to tell process \"Emacs\" to set frontmost to true")))
+
+(add-hook 'server-after-make-frame-hook #'my/mac-escalate-emacsclient-frame)
 
 ;; Ensure all subsequent emacsclient frames are drawn
-(add-to-list 'default-frame-alist '(visibility . t))
+(setq initial-frame-alist '((visibility . nil)))
 
 ;; Start the server internally
 (server-start)
