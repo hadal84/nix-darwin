@@ -59,6 +59,11 @@
         DSDontWriteNetworkStores = true;
         DSDontWriteUSBStores = true;
       };
+
+      "org.gnu.Emacs" = {
+         "HideDocumentIcon" = "YES";
+         "TransparentTitleBar" = "DARK";
+       };
     };
 
     hitoolbox.AppleFnUsageType = "Do Nothing"; # fn key does nothing.

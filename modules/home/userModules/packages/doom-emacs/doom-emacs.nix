@@ -11,6 +11,7 @@
         pkgs.lib.hasInfix "native-comp-driver-options" patchPath
       ) (old.patches or []) ++ [
 	(./patches/31/traffic-lights.patch)
+	(./patches/31/document-icon.patch)
       ];
     });
     doomDir = ./doom.d;

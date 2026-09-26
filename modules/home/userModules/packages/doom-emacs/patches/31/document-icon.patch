@@ -1,0 +1,21 @@
+diff --git a/src/macappkit.m b/src/macappkit.m
+index ffc6eae07bf..5464cb1c975 100644
+--- a/src/macappkit.m
++++ b/src/macappkit.m
+@@ -2069,6 +2069,16 @@ - (BOOL)doesHoldQuit
+ 
+ @implementation EmacsWindow
+ 
++- (void)setRepresentedURL:(NSURL *)url
++{
++  [super setRepresentedURL:nil];
++}
++
++- (void)setRepresentedFilename:(NSString *)aString
++{
++  [super setRepresentedFilename:@""];
++}
++
+ - (instancetype)initWithContentRect:(NSRect)contentRect
+ 			  styleMask:(NSWindowStyleMask)windowStyle
+ 			    backing:(NSBackingStoreType)bufferingType

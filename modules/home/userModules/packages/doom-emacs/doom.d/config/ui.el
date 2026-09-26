@@ -14,13 +14,17 @@
 (setq mac-use-title-bar nil)
 (setq mac-frame-tabbing nil)
 
-(setq ns-use-proxy-icon nil)
 (setq frame-title-format nil)
 
 (setq frame-resize-pixelwise t)
 (setq window-resize-pixelwise t)
 (add-to-list 'default-frame-alist '(tool-bar-lines . 0))
 (add-to-list 'default-frame-alist '(menu-bar-lines . 0))
+
+(custom-set-faces!
+  '(line-number :background unspecified)
+  '(fringe :background unspecified)
+  '(line-number-current-line :background unspecified))
 
 (setq custom-safe-themes t)
 (defvar my-stylix-theme-dir (expand-file-name ".config/doom/" (getenv "HOME")))
