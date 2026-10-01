@@ -1,8 +1,3 @@
-# zellij
-# if [[ -z "$ZELLIJ" && $- == *i* ]] && command -v zellij > /dev/null; then
-#    exec zellij attach -c
-# fi
-
 # paths
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export EDITOR="emacsclient -c -a ''"
@@ -63,5 +58,20 @@ alias ccache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder && e
 alias list-dns="scutil --dns | grep 'nameserver\[[0-9]*\]'"
 alias reset-dns="sudo networksetup -setdnsservers "Wi-Fi" Empty"
 alias fixmount="sudo pkill -f fsck"
+
+# games, because electron launchers suck ass
+function play() {
+    case "$1" in
+        slime-rancher)
+            echo "Starting modded Slime Rancher..."
+	    cd /Users/hadal84/Games/Heroic
+	    /run/current-system/sw/bin/bash /Users/hadal84/Games/Heroic/run_bepinex.sh /Users/hadal84/Games/Heroic/SlimeRancher.app
+            ;;
+        *)
+            echo "Usage: play [Slime Rancher|...]"
+            return 1
+            ;;
+    esac
+}
 
 eval "$(zoxide init zsh --cmd cd)"
