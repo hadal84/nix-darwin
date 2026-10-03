@@ -98,6 +98,7 @@
        (java +lsp +tree-sitter)
        cc
        (python +lsp)           ; beautiful is better than ugly
+       (swift +lsp)
 
        emacs-lisp
        nix
