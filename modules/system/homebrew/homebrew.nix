@@ -61,6 +61,7 @@
     masApps = {
      "DaVinci Resolve" = 571213070;
      "Goodnotes" = 1444383602;
+     "Xcode" = 497799835;
     };
 
     onActivation = {
