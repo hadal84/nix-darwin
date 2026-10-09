@@ -743,6 +743,22 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1791048980,
+        "narHash": "sha256-KgItSKML8Xvte0B7/uGnBDsYzSnnKHcOaiUbgWBXLXw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "a7868a727837f3c09cee2ce0ca671c76b1589fed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -885,6 +901,7 @@
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "suite3270": "suite3270",
+        "terrascope": "terrascope",
         "vscode-extensions": "vscode-extensions",
         "zen-browser": "zen-browser"
       }
@@ -1018,6 +1035,26 @@
         "owner": "nix-systems",
         "ref": "future-26.11",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "terrascope": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "dir": "packaging/nix",
+        "lastModified": 1791538983,
+        "narHash": "sha256-dBTtxaDiSl2YDOeBCEXBMyxw8z6tC+g1ijx9EQzzl5w=",
+        "owner": "a-shygun",
+        "repo": "Terrascope",
+        "rev": "a8ae073a03340f807b2cb17dcd9e2f1c7e7ebccf",
+        "type": "github"
+      },
+      "original": {
+        "dir": "packaging/nix",
+        "owner": "a-shygun",
+        "repo": "Terrascope",
         "type": "github"
       }
     },

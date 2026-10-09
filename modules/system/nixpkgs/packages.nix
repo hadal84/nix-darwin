@@ -44,6 +44,7 @@
     hunspell
     clang_22
     hercules
+    linecast
     nix-tree
     fastfetch
     nixfmt-rs
@@ -70,6 +71,7 @@
 
     inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.herdr.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.terrascope.packages.${pkgs.stdenv.hostPlatform.system}.default
     (pkgs.callPackage ../_derivations/z-library.nix { })
     (pkgs.callPackage ../_derivations/haveno-reto.nix { src = inputs.haveno-reto; })
     (pkgs.callPackage ../_derivations/bisq.nix { src = inputs.bisq; })

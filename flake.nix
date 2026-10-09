@@ -11,6 +11,7 @@
     nur.url = "github:nix-community/NUR";
     agenix.url = "github:ryantm/agenix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    terrascope.url = "github:a-shygun/Terrascope?dir=packaging/nix";
 
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
