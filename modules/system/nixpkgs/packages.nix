@@ -30,6 +30,7 @@
     isort
     rsync
     gdown
+    swift
     rclone
     nodejs
     pipenv
@@ -38,6 +39,7 @@
     gradle
     ktlint
     ripgrep
+    gnumake
     cmatrix
     libllvm
     pyright
