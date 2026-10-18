@@ -16,6 +16,9 @@
 
 (setq frame-title-format nil)
 
+(setq display-line-numbers-type 'visual
+      display-line-numbers-current-absolute t)
+
 (setq frame-resize-pixelwise t)
 (setq window-resize-pixelwise t)
 (add-to-list 'default-frame-alist '(tool-bar-lines . 0))
