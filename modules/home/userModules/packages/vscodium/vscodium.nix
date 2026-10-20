@@ -24,6 +24,7 @@
       userSettings = {
         "telemetry.telemetryLevel" = "off";
         "update.mode" = "none";
+	"workbench.startupEditor" = "none";
 
 	"files.associations" = {
           "**/*.COBOL*{,/*}" = "cobol";
