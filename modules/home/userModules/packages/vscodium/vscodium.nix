@@ -24,6 +24,33 @@
       userSettings = {
         "telemetry.telemetryLevel" = "off";
         "update.mode" = "none";
+
+	"files.associations" = {
+          "**/*.COBOL*{,/*}" = "cobol";
+          "**/*.COB*{,/*}" = "cobol";
+          "**/*.COBCOPY*{,/*}" = "cobol";
+          "**/*.COPYBOOK*{,/*}" = "cobol";
+          "**/*.COPY*{,/*}" = "cobol";
+          "**/*.PL1*{,/*}" = "pl1";
+          "**/*.PLI*{,/*}" = "pl1";
+          "**/*.INC*{,/*}" = "pl1";
+          "**/*.INCLUDE*{,/*}" = "pl1";
+          "**/*.JCL*{,/*}" = "jcl";
+          "**/*.CNTL*{,/*}" = "jcl";
+          "**/*.PROC*{,/*}" = "jcl";
+          "**/*.ASM*{,/*}" = "hlasm";
+          "**/*.ASSEMBLE*{,/*}" = "hlasm";
+          "**/*.HLASM*{,/*}" = "hlasm";
+          "**/*.HLA*{,/*}" = "hlasm";
+          "**/*.MACLIB*{,/*}" = "hlasm";
+          "**/*.DBD*{,/*}" = "hlasm";
+          "**/*.MFS*{,/*}" = "hlasm";
+          "**/*.PCB*{,/*}" = "hlasm";
+          "**/*.EXEC*{,/*}" = "rexx";
+          "**/*.REXX*{,/*}" = "rexx";
+          "**/*.REXXINC*{,/*}" = "rexx";
+          "*.rex" = "rexx";
+        };
       };
 
       extensions = [
