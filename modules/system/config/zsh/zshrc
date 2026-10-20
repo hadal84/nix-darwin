@@ -6,8 +6,6 @@ fpath+=("$(brew --prefix)/share/zsh/site-functions")
 # aliases
 alias fetch="fastfetch"
 alias cat="bat"
-alias python="python3"
-alias pip="pip3"
 alias tmacs="emacs -nw"
 alias "clang++"="clang++ --config ~/.config/clang/clang++.cfg"
 alias ls="lsd"

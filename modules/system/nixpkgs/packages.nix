@@ -8,62 +8,104 @@
 
 {
   environment.systemPackages = with pkgs; [
-    jq
-    fd
-    uv
-    vim
-    git
-    gdb
-    lsd
-    fzf
-    bat
-    ruff
-    skhd
-    lldb
-    tree
-    btop
-    qpdf
-    lavat
-    cmake
-    typst
-    delta
-    isort
-    rsync
-    gdown
-    swift
-    rclone
-    nodejs
-    pipenv
-    rustup
-    zoxide
-    gradle
-    ktlint
-    ripgrep
-    gnumake
-    cmatrix
-    libllvm
+
+    # python
+    (python314.withPackages (
+      ps: with ps; [
+        ipykernel
+        pip
+      ]
+    ))
     pyright
-    hunspell
-    clang_22
-    hercules
-    linecast
-    nix-tree
-    fastfetch
-    nixfmt-rs
-    shellcheck
-    sketchybar
-    hydra-check
-    darwin.trash
-    multimarkdown
-    rust-analyzer
-    temurin-bin-25
-    protonmail-bridge
-    coreutils-prefixed
-    hunspellDicts.tr_TR
-    hunspellDicts.en_US
+    pipenv
     python314Packages.pytest
+    uv
+    ruff
+    isort
+
+    # nix
+    nix-tree
+    nixfmt-rs
+    hydra-check
     lixPackageSets.git.nixpkgs-review
 
+    # debuggers and toolchains
+    gdb
+    lldb
+    cmake
+    gnumake
+    libllvm
+    clang_22
+
+    # spelling dictionaries
+    hunspellDicts.tr_TR
+    hunspellDicts.en_US
+    hunspell
+
+    # cli
+    coreutils-prefixed
+    darwin.trash
+    fastfetch
+    linecast
+    ripgrep
+    cmatrix
+    zoxide
+    lavat
+    gdown
+    tree
+    btop
+    bat
+    lsd
+    fzf
+    vim
+    fd
+
+    # json
+    jq
+
+    # version control
+    delta
+    git
+    got
+
+    # daemons
+    skhd
+    rsync
+    rclone
+    sketchybar
+    protonmail-bridge
+
+    # pdf
+    qpdf
+
+    # typst
+    typst
+
+    # swift
+    swift
+
+    # node
+    nodejs
+
+    # rust
+    rust-analyzer
+    rustup
+
+    # java && kotlin
+    temurin-bin-25
+    gradle
+    ktlint
+
+    # z/OS
+    hercules
+
+    # shell
+    shellcheck
+
+    # md
+    multimarkdown
+
+    # apps
     ghostty-bin
     obsidian
     sioyek
