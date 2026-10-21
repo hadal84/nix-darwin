@@ -92,6 +92,7 @@
     rustup
 
     # java && kotlin
+    jdt-language-server
     temurin-bin-25
     gradle
     ktlint

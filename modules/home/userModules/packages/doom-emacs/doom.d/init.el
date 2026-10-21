@@ -88,6 +88,7 @@
        ;;terraform         ; infrastructure as code
        tmux              ; an API for interacting with tmux.
        tree-sitter       ; syntax and parsing, sitting in a tree...
+       eglot
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
@@ -95,7 +96,7 @@
        tty               ; improve the terminal Emacs experience
 
        :lang
-       (java +lsp +tree-sitter)
+       (java +tree-sitter)
        cc
        (python +lsp)           ; beautiful is better than ugly
        (swift +lsp)

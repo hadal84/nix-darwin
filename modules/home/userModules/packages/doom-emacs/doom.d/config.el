@@ -7,6 +7,7 @@
 (load! "config/treemacs")
 (load! "config/platformio")
 (load! "config/typst")
+(load! "config/lsp")
 (load! "config/mpremote")
 (load! "config/nixfmt")
 (load! "config/hunspell")
