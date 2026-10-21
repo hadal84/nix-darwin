@@ -105,6 +105,9 @@
     # md
     multimarkdown
 
+    # Let's all love LEAN
+    lean4
+
     # apps
     ghostty-bin
     obsidian
