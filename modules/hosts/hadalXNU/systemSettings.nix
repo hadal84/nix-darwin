@@ -110,6 +110,11 @@
         };
       };
     };
+    "com.apple.finder" = {
+      DesktopViewSettings = {
+        GroupBy = "Application";
+      };
+    };
   };
 
   system.activationScripts.postActivation.text = ''
