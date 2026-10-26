@@ -113,6 +113,11 @@
       flake = false;
     };
 
+    playcover = {
+      url = "https://github.com/PlayCover/PlayCover/releases/download/4.0.0-prerelease/PlayCover_4.0.0-prerelease.dmg";
+      flake = false;
+    };
+
     herdr = {
       url = "github:ogulcancelik/herdr";
       inputs.nixpkgs.follows = "nixpkgs";

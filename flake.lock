@@ -854,6 +854,18 @@
         "type": "github"
       }
     },
+    "playcover": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-xzmK5mHt3TpAr31VtZh98oFnnhPTwq829C//4NWL0+w=",
+        "type": "file",
+        "url": "https://github.com/PlayCover/PlayCover/releases/download/4.0.0-prerelease/PlayCover_4.0.0-prerelease.dmg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/PlayCover/PlayCover/releases/download/4.0.0-prerelease/PlayCover_4.0.0-prerelease.dmg"
+      }
+    },
     "prism-oreui": {
       "flake": false,
       "locked": {
@@ -897,6 +909,7 @@
         "ohitstom-spicetify-extensions": "ohitstom-spicetify-extensions",
         "pithaya-spicetify-better-local-files": "pithaya-spicetify-better-local-files",
         "pithaya-spicetify-eternal-jukebox": "pithaya-spicetify-eternal-jukebox",
+        "playcover": "playcover",
         "prism-oreui": "prism-oreui",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",

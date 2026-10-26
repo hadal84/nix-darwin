@@ -125,4 +125,8 @@
     (pkgs.callPackage ../_derivations/bisq.nix { src = inputs.bisq; })
     (pkgs.callPackage ../_derivations/c3270.nix { src = inputs.suite3270; })
   ];
+  
+  imports = [
+    ../_derivations/playcover.nix
+  ];
 }
