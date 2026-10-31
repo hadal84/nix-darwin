@@ -50,8 +50,10 @@
       "electrum"
       "monero-wallet"
       "intellij-idea" 
+
       "heroic" # exclusively for slime rancher
       "steam" # i like buckshot roulette
+      "porting-kit"
     ];
 
     brews = [
