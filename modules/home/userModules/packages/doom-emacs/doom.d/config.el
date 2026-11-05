@@ -1,13 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-(load! "config/ui")
-(load! "config/keys")
-(load! "config/windowserver")
-(load! "config/variables")
-(load! "config/treemacs")
-(load! "config/platformio")
-(load! "config/typst")
-(load! "config/lsp")
-(load! "config/mpremote")
-(load! "config/nixfmt")
-(load! "config/hunspell")
+(let ((config-dir (expand-file-name "config" doom-user-dir)))
+  (when (file-directory-p config-dir)
+    (dolist (file (directory-files config-dir t "\\.el$"))
+      (load file nil 'nomessage)))) ; recursionnnnnnnn
