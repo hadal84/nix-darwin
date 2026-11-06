@@ -534,6 +534,22 @@
         "type": "github"
       }
     },
+    "lean4-mode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793422248,
+        "narHash": "sha256-Zn2f98bm9tykyg/T0TfP+KbiI+OVCT636anJ2+zkCuA=",
+        "owner": "leanprover-community",
+        "repo": "lean4-mode",
+        "rev": "32daa3e56120e6bfc88fcdfa297c4af04b3c08b0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "leanprover-community",
+        "repo": "lean4-mode",
+        "type": "github"
+      }
+    },
     "multiverse": {
       "locked": {
         "lastModified": 1790176818,
@@ -898,6 +914,7 @@
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "import-tree": "import-tree",
+        "lean4-mode": "lean4-mode",
         "multiverse": "multiverse",
         "nix-darwin": "nix-darwin",
         "nix-doom-emacs-unstraightened": "nix-doom-emacs-unstraightened",

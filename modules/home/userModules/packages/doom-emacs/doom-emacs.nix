@@ -18,7 +18,37 @@
     extraPackages = epkgs: [
       epkgs.base16-theme
       epkgs.treesit-grammars.with-all-grammars
+      epkgs.lean4-mode
     ];
+
+    emacsPackageOverrides = final: prev: {
+      lsp-mode = prev.lsp-mode.overrideAttrs (old: {
+        LSP_USE_PLISTS = "true";
+      });
+
+      lean4-mode = final.trivialBuild {
+        pname = "lean4-mode";
+        version = "unstable";
+        src = inputs.lean4-mode;
+
+        postPatch = ''
+          sed -i '2i (setq lsp-use-plists t)' *.el
+        '';
+
+        postInstall = ''
+          cp -r $src/data $out/share/emacs/site-lisp/
+        '';
+
+        packageRequires = with final; [ 
+          lsp-mode 
+          dash 
+          f 
+          s 
+          magit-section 
+        ];
+      };
+    };
+
   };
 
   services.emacs = {

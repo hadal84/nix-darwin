@@ -128,6 +128,11 @@
       flake = false;
     };
 
+    lean4-mode = {
+      url = "github:leanprover-community/lean4-mode";
+      flake = false;
+    };
+
   };
 
   outputs =
