@@ -4,4 +4,4 @@
           (lambda ()
             (global-set-key (kbd "s-<up>") #'text-scale-increase)
             (global-set-key (kbd "s-<down>") #'text-scale-decrease)
-            (message "[keys.el] INFO: Global macOS font scaling bounds successfully initialized.")))
+            (message "[keys.el] INFO: loaded custom keybindings.")))
