@@ -96,17 +96,19 @@
        tty               ; improve the terminal Emacs experience
 
        :lang
-       (java +tree-sitter)
        cc
-       (python +lsp)           ; beautiful is better than ugly
-       (swift +lsp)
-
+       (java +tree-sitter)
        emacs-lisp
+       common-lisp
+       (haskell +lsp)
        nix
-       (org +pretty)         ; tasing is believing
+       (latex + latexmk +lsp)
+       (org +pretty)
+       sh
+       assembly
 
+       (python +lsp)           ; beautiful is better than ugly
        markdown          ; writing docs for people to ignore
-       sh                ; she sells {ba,z,fi}sh shells on the C xor
        json
 
        :config

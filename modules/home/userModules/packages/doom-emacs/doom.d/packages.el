@@ -11,3 +11,6 @@
 
 ; stylix integration
 (package! base16-theme)
+
+; cobol.
+(package! cobol-mode)

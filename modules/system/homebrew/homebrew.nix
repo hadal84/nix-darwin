@@ -50,6 +50,7 @@
       "electrum"
       "monero-wallet"
       "intellij-idea" 
+      "mactex"
 
       "heroic" # exclusively for slime rancher
       "steam" # i like buckshot roulette
