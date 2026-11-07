@@ -51,7 +51,6 @@
       "monero-wallet"
       "intellij-idea" 
       "mactex"
-      "droidcam-obs"
 
       "heroic" # exclusively for slime rancher
       "steam" # i like buckshot roulette

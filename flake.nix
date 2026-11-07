@@ -133,6 +133,11 @@
       flake = false;
     };
 
+    droidcam-pkg = {
+      url = "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.5.1/DroidCamOBS_2.5.1_macos.pkg";
+      flake = false;
+    };
+
   };
 
   outputs =

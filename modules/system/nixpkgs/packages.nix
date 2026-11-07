@@ -128,5 +128,6 @@
   
   imports = [
     ../_derivations/playcover.nix
+    ../_derivations/droidcam-obs.nix
   ];
 }

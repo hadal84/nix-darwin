@@ -188,6 +188,18 @@
         "type": "github"
       }
     },
+    "droidcam-pkg": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-OKLwCCp9ekMHs2QvRJetr91t8rCch4kZFHm3xaYCP6Q=",
+        "type": "file",
+        "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.5.1/DroidCamOBS_2.5.1_macos.pkg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/2.5.1/DroidCamOBS_2.5.1_macos.pkg"
+      }
+    },
     "emacs-mac-src": {
       "flake": false,
       "locked": {
@@ -903,6 +915,7 @@
         "agenix": "agenix",
         "bisq": "bisq",
         "brew-src": "brew-src",
+        "droidcam-pkg": "droidcam-pkg",
         "emacs-mac-src": "emacs-mac-src",
         "flake-parts": "flake-parts",
         "frc-nix": "frc-nix",
