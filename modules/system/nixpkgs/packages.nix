@@ -50,6 +50,7 @@
     ripgrep
     cmatrix
     zoxide
+    ffmpeg
     lavat
     gdown
     tree
