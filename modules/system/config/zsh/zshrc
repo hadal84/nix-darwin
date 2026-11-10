@@ -26,6 +26,24 @@ alias rebuild="sudo -E darwin-rebuild switch --flake ~/nix-darwin/#xnu && exec z
 alias update="sudo -H nix flake update && rebuild"
 alias cleanup="sudo nix-collect-garbage -d"
 
+# stupid python util
+function py() {
+    case "$1" in
+        ls)
+            echo "all packages installed via uv:..."
+	    uv tree
+            ;;
+        server)
+            echo "starting jupyter server..."
+            uv run jupyter server --no-browser --port=8888
+            ;;
+        *)
+            echo "Usage: py [ls|server]"
+            return 1
+            ;;
+    esac
+}
+
 # security [en0]
 alias ip-info='curl ipinfo.io'
 alias local-scan="sudo arp-scan -I en0 --localnet"
