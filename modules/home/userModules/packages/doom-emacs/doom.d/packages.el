@@ -12,5 +12,8 @@
 ; stylix integration
 (package! base16-theme)
 
-; cobol.
+; cobol
 (package! cobol-mode)
+
+; zoxide
+(package! zoxide)
