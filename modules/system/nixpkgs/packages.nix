@@ -92,6 +92,12 @@
     rust-analyzer
     rustup
 
+    # lisp
+    (sbcl.withPackages (ps: with ps; [
+      slynk
+      agnostic-lizard
+    ]))
+
     # java && kotlin
     jdt-language-server
     temurin-bin-25
