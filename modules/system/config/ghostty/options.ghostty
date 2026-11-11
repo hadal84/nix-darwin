@@ -22,3 +22,5 @@ quick-terminal-animation-duration = 0.1
 
 keybind = global:cmd+shift+enter=toggle_quick_terminal
 keybind = global:cmd+enter=new_window
+keybind = super+up=increase_font_size:2
+keybind = super+down=decrease_font_size:2
