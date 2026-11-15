@@ -103,6 +103,7 @@
     temurin-bin-25
     gradle
     ktlint
+    jadx
 
     # z/OS
     hercules
