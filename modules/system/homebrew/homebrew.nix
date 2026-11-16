@@ -43,7 +43,6 @@
       "stremio"
       "ungoogled-chromium"
       "vlc"
-      "reaper"
       "vesktop"
       "appcleaner"
       "electrum-ltc"
