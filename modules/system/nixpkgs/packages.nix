@@ -84,6 +84,8 @@
 
     # swift
     swift
+    # XNU reverse engineering
+    ipsw
 
     # node
     nodejs
@@ -103,6 +105,7 @@
     temurin-bin-25
     gradle
     ktlint
+    # android reverse engineering
     jadx
 
     # z/OS
