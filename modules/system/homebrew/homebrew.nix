@@ -51,6 +51,7 @@
       "intellij-idea" 
       "mactex"
       "devcleaner"
+      "sf-symbols"
 
       "heroic" # exclusively for slime rancher
       "steam" # i like buckshot roulette
