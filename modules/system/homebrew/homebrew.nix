@@ -52,6 +52,7 @@
       "mactex"
       "devcleaner"
       "sf-symbols"
+      "claude"
 
       "heroic" # exclusively for slime rancher
       "steam" # i like buckshot roulette
