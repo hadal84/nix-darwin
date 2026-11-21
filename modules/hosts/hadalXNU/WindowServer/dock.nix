@@ -25,6 +25,7 @@
     "/System/Applications/Utilities/Activity Monitor.app"
     "/Applications/KiCad/KiCad.app"
     "/Applications/FreeCAD.app"
+    "/Applications/Claude.app"
     "/Applications/Clash Verge.app"
     "/Applications/WhatsApp.app"
   ];
