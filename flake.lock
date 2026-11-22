@@ -787,6 +787,22 @@
         "type": "github"
       }
     },
+    "nothing-bar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1795087624,
+        "narHash": "sha256-B0t6RX/G4dPieXOnHf3+qB0iUV2hK20+qtuSG5s8Jx0=",
+        "owner": "bestK1ngArthur",
+        "repo": "nothing-bar",
+        "rev": "7eae58040a6e3add0fd52314b7930da764777bb8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bestK1ngArthur",
+        "repo": "nothing-bar",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -935,6 +951,7 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-stable": "nixpkgs-stable",
+        "nothing-bar": "nothing-bar",
         "nur": "nur",
         "ohitstom-spicetify-extensions": "ohitstom-spicetify-extensions",
         "pithaya-spicetify-better-local-files": "pithaya-spicetify-better-local-files",

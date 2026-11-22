@@ -138,6 +138,11 @@
       flake = false;
     };
 
+    nothing-bar = {
+      url = "github:bestK1ngArthur/nothing-bar";
+      flake = false;
+    };
+
   };
 
   outputs =

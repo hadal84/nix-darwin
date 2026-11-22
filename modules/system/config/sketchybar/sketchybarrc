@@ -128,16 +128,28 @@ sketchybar --add item clock right \
                        label.padding_left=8 \
                        label.padding_right=8 \
                        padding_right=8 \
+                       padding_left=8 \
                        script="$PLUGIN_DIR/clock.sh"
 sketchybar --trigger date_time_update
+
+# COMPONENT: nothing headphones [1] control
+sketchybar --add item headphones right \
+           --set headphones \
+                 icon= \
+		 label.drawing=off \
+                 icon.padding_left=13 \
+                 icon.padding_right=13 \
+		 icon.font.size=25 \
+                 click_script="$PLUGIN_DIR/nothing_bar.sh"
+                 #padding_right=8 \
+                 #padding_left=8 \
 
 # COMPONENT: battery percentage
 sketchybar --add item battery right \
             --subscribe battery system_woke power_source_change \
             --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
                           label.padding_right=8 \
-                          icon.padding_left=8 \
-                          padding_right=8 \
+                          icon.padding_left=13 \
                           padding_right=8 \
                           click_script="osascript -e 'tell application \"System Events\" to tell process \"Control Center\" to perform action \"AXPress\" of menu bar item 2 of menu bar 1'" \
 

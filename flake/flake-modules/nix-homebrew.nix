@@ -9,6 +9,7 @@
       "homebrew/homebrew-core" = inputs.homebrew-core;
       "homebrew/homebrew-bundle" = inputs.homebrew-bundle;
       "homebrew/homebrew-cask" = inputs.homebrew-cask;
+      "bestk1ngarthur/homebrew-nothingbar" = inputs.nothing-bar;
     };
     trust = {
       formulae = [

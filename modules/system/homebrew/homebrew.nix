@@ -53,6 +53,7 @@
       "devcleaner"
       "sf-symbols"
       "claude"
+      "bestk1ngarthur/nothingbar/nothingbar"
 
       "heroic" # exclusively for slime rancher
       "steam" # i like buckshot roulette
