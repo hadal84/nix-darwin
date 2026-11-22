@@ -62,6 +62,7 @@
     brews = [
       "pure"
       "mingw-w64"
+      "apktool"
     ];
 
     masApps = {
