@@ -143,6 +143,11 @@
       flake = false;
     };
 
+    obsidian-extensions = {
+      url = "github:karaolidis/nix-obsidian-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =

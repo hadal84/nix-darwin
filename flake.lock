@@ -847,6 +847,27 @@
         "type": "github"
       }
     },
+    "obsidian-extensions": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "treefmt-nix": "treefmt-nix"
+      },
+      "locked": {
+        "lastModified": 1795619459,
+        "narHash": "sha256-abc6/cD8s8ye3uVUSYURpktpk9OBBgYngpPnql3idOs=",
+        "owner": "karaolidis",
+        "repo": "nix-obsidian-extensions",
+        "rev": "305cd5475f6d6fec62fd601e2d84725ef1e82c1e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "karaolidis",
+        "repo": "nix-obsidian-extensions",
+        "type": "github"
+      }
+    },
     "ohitstom-spicetify-extensions": {
       "flake": false,
       "locked": {
@@ -953,6 +974,7 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nothing-bar": "nothing-bar",
         "nur": "nur",
+        "obsidian-extensions": "obsidian-extensions",
         "ohitstom-spicetify-extensions": "ohitstom-spicetify-extensions",
         "pithaya-spicetify-better-local-files": "pithaya-spicetify-better-local-files",
         "pithaya-spicetify-eternal-jukebox": "pithaya-spicetify-eternal-jukebox",
@@ -1179,6 +1201,27 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "treefmt-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "obsidian-extensions",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785360170,
+        "narHash": "sha256-XE1lKgQ3eIO3E7zWryqcRsax+mYXod/5RHBn4YaR9YE=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "d1187f8bc71fb8aab02395869ec3f5c1920f75c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
         "type": "github"
       }
     },
