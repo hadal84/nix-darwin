@@ -29,7 +29,21 @@
           "obsidian" = {
             target = "zumrutKitaplik/obsidian";
             settings = {
-              app.vimMode = true;
+
+              app = {
+                vimMode = true;
+                showInlineTitle = false;
+                spellcheck = false;
+                readableLineLength = false;
+              };
+
+              appearance = lib.mkForce {
+                textFontFamily = "Dossier Nerd Font";
+                interfaceFontFamily = "CMU Concrete";
+                monospaceFontFamily = "CaskaydiaMono Nerd Font";
+                baseFontSize = 15;
+              };
+
               cssSnippets = [
                 {
                   name = "hide-scrollbar";
@@ -39,12 +53,16 @@
                   '';
                 }
               ];
+
               communityPlugins = with pkgs.obsidianPlugins; [
                 table-editor-obsidian
                 obsidian-full-calendar
                 obsidian-tasks-plugin
                 hybrid-line-numbers
+                graph-insight
+                black-hole-graph
               ];
+
             };
           };
         };

@@ -120,6 +120,9 @@
     # Let's all love LEAN
     lean4
 
+    # typography stuff
+    python314Packages.fonttools
+
     # apps
     ghostty-bin
     obsidian
